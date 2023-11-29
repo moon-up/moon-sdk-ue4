@@ -47,16 +47,16 @@ public:
 
 	double Nonce = 0.0;
 	FString Balance;
-	TOptional<FString> TransactionHash;
-	TOptional<FString> SignedTransaction;
-	TOptional<FString> RawTransaction;
-	FString Data;
-	TOptional<TArray<OpenAPITransactionData>> Transactions;
-	TOptional<FString> MoonScanUrl;
-	TOptional<FString> Signature;
-	TOptional<OpenAPITx> Transaction;
-	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
 	TOptional<FString> UseropTransaction;
+	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
+	TOptional<OpenAPITx> Transaction;
+	TOptional<FString> Signature;
+	TOptional<FString> MoonScanUrl;
+	TOptional<TArray<OpenAPITransactionData>> Transactions;
+	FString Data;
+	TOptional<FString> RawTransaction;
+	TOptional<FString> SignedTransaction;
+	TOptional<FString> TransactionHash;
 	TOptional<TArray<FString>> Keys;
 	FString Address;
 	TOptional<FString> Name;
