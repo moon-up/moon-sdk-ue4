@@ -13,7 +13,6 @@
 #pragma once
 
 #include "OpenAPIBaseModel.h"
-#include "OpenAPITransactionData.h"
 #include "OpenAPITransactionRequest.h"
 #include "OpenAPITx.h"
 
@@ -21,23 +20,22 @@ namespace OpenAPI
 {
 
 /*
- * OpenAPITransaction
+ * OpenAPITransactionData
  *
  * 
  */
-class OPENAPI_API OpenAPITransaction : public Model
+class OPENAPI_API OpenAPITransactionData : public Model
 {
 public:
-    virtual ~OpenAPITransaction() {}
+    virtual ~OpenAPITransactionData() {}
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	TOptional<FString> TransactionHash;
-	TOptional<FString> SignedTransaction;
-	TOptional<FString> RawTransaction;
-	TOptional<FString> Data;
-	TOptional<TArray<OpenAPITransactionData>> Transactions;
 	TOptional<FString> MoonScanUrl;
+	FString TransactionHash;
+	FString SignedTransaction;
+	TOptional<FString> SignedMessage;
+	TOptional<FString> RawTransaction;
 	TOptional<FString> Signature;
 	TOptional<OpenAPITx> Transaction;
 	TOptional<TArray<OpenAPITransactionRequest>> UserOps;

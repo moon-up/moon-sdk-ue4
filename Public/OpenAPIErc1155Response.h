@@ -13,8 +13,6 @@
 #pragma once
 
 #include "OpenAPIBaseModel.h"
-#include "OpenAPITransactionRequest.h"
-#include "OpenAPITx.h"
 
 namespace OpenAPI
 {
@@ -31,15 +29,23 @@ public:
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	TOptional<FString> MoonScanUrl;
-	FString TransactionHash;
-	FString SignedTransaction;
-	TOptional<FString> SignedMessage;
-	TOptional<FString> RawTransaction;
-	TOptional<FString> Signature;
-	TOptional<TMap<FString, OpenAPITx>> Transaction;
-	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
-	TOptional<FString> UseropTransaction;
+	TOptional<double> Type;
+	TOptional<double> ChainId;
+	TOptional<FString> Data;
+	TOptional<FString> Gas;
+	TOptional<FString> GasPrice;
+	TOptional<FString> GasTipCap;
+	TOptional<FString> GasFeeCap;
+	TOptional<FString> Value;
+	TOptional<double> Nonce;
+	TOptional<FString> From;
+	TOptional<FString> To;
+	TOptional<FString> BlobGas;
+	TOptional<FString> BlobGasFeeCap;
+	TOptional<TArray<FString>> BlobHashes;
+	TOptional<FString> V;
+	TOptional<FString> R;
+	TOptional<FString> S;
 	TOptional<FString> BalanceOf;
 	TOptional<FString> BalanceOfBatch;
 };

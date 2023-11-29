@@ -25,19 +25,26 @@ void OpenAPIAccountControllerResponseData::WriteJson(JsonWriter& Writer) const
 	Writer->WriteObjectStart();
 	Writer->WriteIdentifierPrefix(TEXT("nonce")); WriteJsonValue(Writer, Nonce);
 	Writer->WriteIdentifierPrefix(TEXT("balance")); WriteJsonValue(Writer, Balance);
-	if (MoonScanUrl.IsSet())
+	if (TransactionHash.IsSet())
 	{
-		Writer->WriteIdentifierPrefix(TEXT("moon_scan_url")); WriteJsonValue(Writer, MoonScanUrl.GetValue());
+		Writer->WriteIdentifierPrefix(TEXT("transaction_hash")); WriteJsonValue(Writer, TransactionHash.GetValue());
 	}
-	Writer->WriteIdentifierPrefix(TEXT("transaction_hash")); WriteJsonValue(Writer, TransactionHash);
-	Writer->WriteIdentifierPrefix(TEXT("signed_transaction")); WriteJsonValue(Writer, SignedTransaction);
-	if (SignedMessage.IsSet())
+	if (SignedTransaction.IsSet())
 	{
-		Writer->WriteIdentifierPrefix(TEXT("signed_message")); WriteJsonValue(Writer, SignedMessage.GetValue());
+		Writer->WriteIdentifierPrefix(TEXT("signed_transaction")); WriteJsonValue(Writer, SignedTransaction.GetValue());
 	}
 	if (RawTransaction.IsSet())
 	{
 		Writer->WriteIdentifierPrefix(TEXT("raw_transaction")); WriteJsonValue(Writer, RawTransaction.GetValue());
+	}
+	Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data);
+	if (Transactions.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("transactions")); WriteJsonValue(Writer, Transactions.GetValue());
+	}
+	if (MoonScanUrl.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("moon_scan_url")); WriteJsonValue(Writer, MoonScanUrl.GetValue());
 	}
 	if (Signature.IsSet())
 	{
@@ -64,7 +71,6 @@ void OpenAPIAccountControllerResponseData::WriteJson(JsonWriter& Writer) const
 	{
 		Writer->WriteIdentifierPrefix(TEXT("name")); WriteJsonValue(Writer, Name.GetValue());
 	}
-	Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data);
 	if (Encoding.IsSet())
 	{
 		Writer->WriteIdentifierPrefix(TEXT("encoding")); WriteJsonValue(Writer, Encoding.GetValue());
@@ -88,6 +94,66 @@ void OpenAPIAccountControllerResponseData::WriteJson(JsonWriter& Writer) const
 	Writer->WriteIdentifierPrefix(TEXT("variable_borrow_index")); WriteJsonValue(Writer, VariableBorrowIndex);
 	Writer->WriteIdentifierPrefix(TEXT("last_update_timestamp")); WriteJsonValue(Writer, LastUpdateTimestamp);
 	Writer->WriteIdentifierPrefix(TEXT("usage_as_collateral_enabled")); WriteJsonValue(Writer, UsageAsCollateralEnabled);
+	if (Type.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("type")); WriteJsonValue(Writer, Type.GetValue());
+	}
+	if (ChainId.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("chain_id")); WriteJsonValue(Writer, ChainId.GetValue());
+	}
+	if (Gas.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("gas")); WriteJsonValue(Writer, Gas.GetValue());
+	}
+	if (GasPrice.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("gas_price")); WriteJsonValue(Writer, GasPrice.GetValue());
+	}
+	if (GasTipCap.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("gas_tip_cap")); WriteJsonValue(Writer, GasTipCap.GetValue());
+	}
+	if (GasFeeCap.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("gas_fee_cap")); WriteJsonValue(Writer, GasFeeCap.GetValue());
+	}
+	if (Value.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("value")); WriteJsonValue(Writer, Value.GetValue());
+	}
+	if (From.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("from")); WriteJsonValue(Writer, From.GetValue());
+	}
+	if (To.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("to")); WriteJsonValue(Writer, To.GetValue());
+	}
+	if (BlobGas.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("blob_gas")); WriteJsonValue(Writer, BlobGas.GetValue());
+	}
+	if (BlobGasFeeCap.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("blob_gas_fee_cap")); WriteJsonValue(Writer, BlobGasFeeCap.GetValue());
+	}
+	if (BlobHashes.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("blob_hashes")); WriteJsonValue(Writer, BlobHashes.GetValue());
+	}
+	if (V.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("v")); WriteJsonValue(Writer, V.GetValue());
+	}
+	if (R.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("r")); WriteJsonValue(Writer, R.GetValue());
+	}
+	if (S.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("s")); WriteJsonValue(Writer, S.GetValue());
+	}
 	if (Symbol.IsSet())
 	{
 		Writer->WriteIdentifierPrefix(TEXT("symbol")); WriteJsonValue(Writer, Symbol.GetValue());
@@ -151,11 +217,12 @@ bool OpenAPIAccountControllerResponseData::FromJson(const TSharedPtr<FJsonValue>
 
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("nonce"), Nonce);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("balance"), Balance);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("moon_scan_url"), MoonScanUrl);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction_hash"), TransactionHash);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signed_transaction"), SignedTransaction);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signed_message"), SignedMessage);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("raw_transaction"), RawTransaction);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transactions"), Transactions);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("moon_scan_url"), MoonScanUrl);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signature"), Signature);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction"), Transaction);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("userOps"), UserOps);
@@ -163,7 +230,6 @@ bool OpenAPIAccountControllerResponseData::FromJson(const TSharedPtr<FJsonValue>
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("keys"), Keys);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("address"), Address);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("name"), Name);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("encoding"), Encoding);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("header"), Header);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signtype"), Signtype);
@@ -178,6 +244,21 @@ bool OpenAPIAccountControllerResponseData::FromJson(const TSharedPtr<FJsonValue>
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("variable_borrow_index"), VariableBorrowIndex);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("last_update_timestamp"), LastUpdateTimestamp);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("usage_as_collateral_enabled"), UsageAsCollateralEnabled);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("type"), Type);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("chain_id"), ChainId);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("gas"), Gas);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("gas_price"), GasPrice);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("gas_tip_cap"), GasTipCap);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("gas_fee_cap"), GasFeeCap);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("value"), Value);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("from"), From);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("to"), To);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("blob_gas"), BlobGas);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("blob_gas_fee_cap"), BlobGasFeeCap);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("blob_hashes"), BlobHashes);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("v"), V);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("r"), R);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("s"), S);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("symbol"), Symbol);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("decimals"), Decimals);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("totalSupply"), TotalSupply);

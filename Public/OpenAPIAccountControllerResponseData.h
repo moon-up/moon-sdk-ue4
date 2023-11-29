@@ -26,6 +26,7 @@
 #include "OpenAPINonceResponse.h"
 #include "OpenAPISignMessage.h"
 #include "OpenAPITransaction.h"
+#include "OpenAPITransactionData.h"
 #include "OpenAPITransactionRequest.h"
 #include "OpenAPITx.h"
 
@@ -46,19 +47,19 @@ public:
 
 	double Nonce = 0.0;
 	FString Balance;
-	TOptional<FString> MoonScanUrl;
-	FString TransactionHash;
-	FString SignedTransaction;
-	TOptional<FString> SignedMessage;
+	TOptional<FString> TransactionHash;
+	TOptional<FString> SignedTransaction;
 	TOptional<FString> RawTransaction;
+	FString Data;
+	TOptional<TArray<OpenAPITransactionData>> Transactions;
+	TOptional<FString> MoonScanUrl;
 	TOptional<FString> Signature;
-	TOptional<TMap<FString, OpenAPITx>> Transaction;
+	TOptional<OpenAPITx> Transaction;
 	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
 	TOptional<FString> UseropTransaction;
 	TOptional<TArray<FString>> Keys;
 	FString Address;
 	TOptional<FString> Name;
-	FString Data;
 	TOptional<FString> Encoding;
 	TOptional<bool> Header;
 	TOptional<bool> Signtype;
@@ -73,6 +74,21 @@ public:
 	FString VariableBorrowIndex;
 	FString LastUpdateTimestamp;
 	FString UsageAsCollateralEnabled;
+	TOptional<double> Type;
+	TOptional<double> ChainId;
+	TOptional<FString> Gas;
+	TOptional<FString> GasPrice;
+	TOptional<FString> GasTipCap;
+	TOptional<FString> GasFeeCap;
+	TOptional<FString> Value;
+	TOptional<FString> From;
+	TOptional<FString> To;
+	TOptional<FString> BlobGas;
+	TOptional<FString> BlobGasFeeCap;
+	TOptional<TArray<FString>> BlobHashes;
+	TOptional<FString> V;
+	TOptional<FString> R;
+	TOptional<FString> S;
 	TOptional<FString> Symbol;
 	TOptional<FString> Decimals;
 	TOptional<FString> TotalSupply;

@@ -15,6 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIInputBody.h"
 #include "OpenAPITransaction.h"
+#include "OpenAPITransactionData.h"
 #include "OpenAPITransactionResponse.h"
 #include "OpenAPITransactionResponseTx.h"
 
@@ -35,7 +36,7 @@ public:
 
 	TOptional<OpenAPIInputBody> Input;
 	TOptional<OpenAPITransactionResponse> Convey;
-	TOptional<OpenAPITransaction> Data;
+	TOptional<OpenAPITransactionData> Data;
 	TOptional<OpenAPITransactionResponseTx> Tx;
 	TOptional<OpenAPITransaction> _Signed;
 	bool Success = false;
