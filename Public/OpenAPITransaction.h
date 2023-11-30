@@ -32,16 +32,16 @@ public:
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	TOptional<FString> UseropTransaction;
-	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
-	TOptional<OpenAPITx> Transaction;
-	TOptional<FString> Signature;
-	TOptional<FString> MoonScanUrl;
-	TOptional<TArray<OpenAPITransactionData>> Transactions;
-	TOptional<FString> Data;
-	TOptional<FString> RawTransaction;
-	TOptional<FString> SignedTransaction;
 	TOptional<FString> TransactionHash;
+	TOptional<FString> SignedTransaction;
+	TOptional<FString> RawTransaction;
+	TOptional<FString> Data;
+	TOptional<TArray<OpenAPITransactionData>> Transactions;
+	TOptional<FString> MoonScanUrl;
+	TOptional<FString> Signature;
+	TOptional<OpenAPITx> Transaction;
+	TOptional<TArray<OpenAPITransactionRequest>> UserOps;
+	TOptional<FString> UseropTransaction;
 };
 
 }

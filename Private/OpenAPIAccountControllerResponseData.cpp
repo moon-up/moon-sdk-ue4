@@ -25,42 +25,42 @@ void OpenAPIAccountControllerResponseData::WriteJson(JsonWriter& Writer) const
 	Writer->WriteObjectStart();
 	Writer->WriteIdentifierPrefix(TEXT("nonce")); WriteJsonValue(Writer, Nonce);
 	Writer->WriteIdentifierPrefix(TEXT("balance")); WriteJsonValue(Writer, Balance);
-	if (UseropTransaction.IsSet())
+	if (TransactionHash.IsSet())
 	{
-		Writer->WriteIdentifierPrefix(TEXT("userop_transaction")); WriteJsonValue(Writer, UseropTransaction.GetValue());
-	}
-	if (UserOps.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("userOps")); WriteJsonValue(Writer, UserOps.GetValue());
-	}
-	if (Transaction.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("transaction")); WriteJsonValue(Writer, Transaction.GetValue());
-	}
-	if (Signature.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("signature")); WriteJsonValue(Writer, Signature.GetValue());
-	}
-	if (MoonScanUrl.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("moon_scan_url")); WriteJsonValue(Writer, MoonScanUrl.GetValue());
-	}
-	if (Transactions.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("transactions")); WriteJsonValue(Writer, Transactions.GetValue());
-	}
-	Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data);
-	if (RawTransaction.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("raw_transaction")); WriteJsonValue(Writer, RawTransaction.GetValue());
+		Writer->WriteIdentifierPrefix(TEXT("transaction_hash")); WriteJsonValue(Writer, TransactionHash.GetValue());
 	}
 	if (SignedTransaction.IsSet())
 	{
 		Writer->WriteIdentifierPrefix(TEXT("signed_transaction")); WriteJsonValue(Writer, SignedTransaction.GetValue());
 	}
-	if (TransactionHash.IsSet())
+	if (RawTransaction.IsSet())
 	{
-		Writer->WriteIdentifierPrefix(TEXT("transaction_hash")); WriteJsonValue(Writer, TransactionHash.GetValue());
+		Writer->WriteIdentifierPrefix(TEXT("raw_transaction")); WriteJsonValue(Writer, RawTransaction.GetValue());
+	}
+	Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data);
+	if (Transactions.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("transactions")); WriteJsonValue(Writer, Transactions.GetValue());
+	}
+	if (MoonScanUrl.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("moon_scan_url")); WriteJsonValue(Writer, MoonScanUrl.GetValue());
+	}
+	if (Signature.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("signature")); WriteJsonValue(Writer, Signature.GetValue());
+	}
+	if (Transaction.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("transaction")); WriteJsonValue(Writer, Transaction.GetValue());
+	}
+	if (UserOps.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("userOps")); WriteJsonValue(Writer, UserOps.GetValue());
+	}
+	if (UseropTransaction.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("userop_transaction")); WriteJsonValue(Writer, UseropTransaction.GetValue());
 	}
 	if (Keys.IsSet())
 	{
@@ -217,16 +217,16 @@ bool OpenAPIAccountControllerResponseData::FromJson(const TSharedPtr<FJsonValue>
 
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("nonce"), Nonce);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("balance"), Balance);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("userop_transaction"), UseropTransaction);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("userOps"), UserOps);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction"), Transaction);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signature"), Signature);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("moon_scan_url"), MoonScanUrl);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transactions"), Transactions);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("raw_transaction"), RawTransaction);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signed_transaction"), SignedTransaction);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction_hash"), TransactionHash);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signed_transaction"), SignedTransaction);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("raw_transaction"), RawTransaction);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transactions"), Transactions);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("moon_scan_url"), MoonScanUrl);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signature"), Signature);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction"), Transaction);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("userOps"), UserOps);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("userop_transaction"), UseropTransaction);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("keys"), Keys);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("address"), Address);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("name"), Name);
