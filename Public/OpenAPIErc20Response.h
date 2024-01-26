@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,7 +22,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIErc20Response : public Model
+class MOONSDK_API OpenAPIErc20Response : public Model
 {
 public:
     virtual ~OpenAPIErc20Response() {}

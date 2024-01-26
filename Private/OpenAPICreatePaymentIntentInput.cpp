@@ -12,17 +12,21 @@
 
 #include "OpenAPICreatePaymentIntentInput.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPICreatePaymentIntentInput::WriteJson(JsonWriter& Writer) const
 {
 	Writer->WriteObjectStart();
+	if (Config.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("config")); WriteJsonValue(Writer, Config.GetValue());
+	}
 	Writer->WriteIdentifierPrefix(TEXT("metadata")); WriteJsonValue(Writer, Metadata);
 	if (Network.IsSet())
 	{
@@ -44,6 +48,7 @@ bool OpenAPICreatePaymentIntentInput::FromJson(const TSharedPtr<FJsonValue>& Jso
 
 	bool ParseSuccess = true;
 
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("config"), Config);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("metadata"), Metadata);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("network"), Network);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("amount"), Amount);

@@ -18,14 +18,110 @@
 #include "OpenAPICreatePaymentIntentInput.h"
 #include "OpenAPIIWebhook.h"
 #include "OpenAPIPaymentIntentResponse.h"
+#include "OpenAPITatumTransactionEvent.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::MoralisWebhookRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::CreatePaymentIntentConfigRequest : public Request
+{
+public:
+    virtual ~CreatePaymentIntentConfigRequest() {}
+	void SetupHttpRequest(const FHttpRequestRef& HttpRequest) const final;
+	FString ComputePath() const final;
+
+	FString Authorization;
+	TSharedPtr<FJsonValue> Body;
+};
+
+class MOONSDK_API OpenAPIPaymentApi::CreatePaymentIntentConfigResponse : public Response
+{
+public:
+    virtual ~CreatePaymentIntentConfigResponse() {}
+	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
+	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
+
+    TSharedPtr<FJsonValue> Content;
+};
+
+/* 
+
+*/
+class MOONSDK_API OpenAPIPaymentApi::DeletePaymentIntentConfigRequest : public Request
+{
+public:
+    virtual ~DeletePaymentIntentConfigRequest() {}
+	void SetupHttpRequest(const FHttpRequestRef& HttpRequest) const final;
+	FString ComputePath() const final;
+
+	FString Authorization;
+	FString Id;
+};
+
+class MOONSDK_API OpenAPIPaymentApi::DeletePaymentIntentConfigResponse : public Response
+{
+public:
+    virtual ~DeletePaymentIntentConfigResponse() {}
+	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
+	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
+
+    OpenAPIPaymentIntentResponse Content;
+};
+
+/* 
+
+*/
+class MOONSDK_API OpenAPIPaymentApi::GetAllPaymentIntentConfigsRequest : public Request
+{
+public:
+    virtual ~GetAllPaymentIntentConfigsRequest() {}
+	void SetupHttpRequest(const FHttpRequestRef& HttpRequest) const final;
+	FString ComputePath() const final;
+
+	FString Authorization;
+};
+
+class MOONSDK_API OpenAPIPaymentApi::GetAllPaymentIntentConfigsResponse : public Response
+{
+public:
+    virtual ~GetAllPaymentIntentConfigsResponse() {}
+	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
+	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
+
+    TArray<OpenAPIPaymentIntentResponse> Content;
+};
+
+/* 
+
+*/
+class MOONSDK_API OpenAPIPaymentApi::GetOnePaymentIntentConfigsRequest : public Request
+{
+public:
+    virtual ~GetOnePaymentIntentConfigsRequest() {}
+	void SetupHttpRequest(const FHttpRequestRef& HttpRequest) const final;
+	FString ComputePath() const final;
+
+	FString Authorization;
+	FString Id;
+};
+
+class MOONSDK_API OpenAPIPaymentApi::GetOnePaymentIntentConfigsResponse : public Response
+{
+public:
+    virtual ~GetOnePaymentIntentConfigsResponse() {}
+	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
+	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
+
+    OpenAPIPaymentIntentResponse Content;
+};
+
+/* 
+
+*/
+class MOONSDK_API OpenAPIPaymentApi::MoralisWebhookRequest : public Request
 {
 public:
     virtual ~MoralisWebhookRequest() {}
@@ -36,7 +132,7 @@ public:
 	OpenAPIIWebhook OpenAPIIWebhook;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::MoralisWebhookResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::MoralisWebhookResponse : public Response
 {
 public:
     virtual ~MoralisWebhookResponse() {}
@@ -49,7 +145,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentCreatePaymentIntentRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentCreatePaymentIntentRequest : public Request
 {
 public:
     virtual ~PaymentCreatePaymentIntentRequest() {}
@@ -60,7 +156,7 @@ public:
 	OpenAPICreatePaymentIntentInput OpenAPICreatePaymentIntentInput;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentCreatePaymentIntentResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentCreatePaymentIntentResponse : public Response
 {
 public:
     virtual ~PaymentCreatePaymentIntentResponse() {}
@@ -73,7 +169,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentDeletePaymentIntentRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentDeletePaymentIntentRequest : public Request
 {
 public:
     virtual ~PaymentDeletePaymentIntentRequest() {}
@@ -84,7 +180,7 @@ public:
 	FString Id;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentDeletePaymentIntentResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentDeletePaymentIntentResponse : public Response
 {
 public:
     virtual ~PaymentDeletePaymentIntentResponse() {}
@@ -97,7 +193,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetAllPaymentIntentsRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetAllPaymentIntentsRequest : public Request
 {
 public:
     virtual ~PaymentGetAllPaymentIntentsRequest() {}
@@ -107,7 +203,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetAllPaymentIntentsResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetAllPaymentIntentsResponse : public Response
 {
 public:
     virtual ~PaymentGetAllPaymentIntentsResponse() {}
@@ -120,7 +216,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetAvailableChainsRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetAvailableChainsRequest : public Request
 {
 public:
     virtual ~PaymentGetAvailableChainsRequest() {}
@@ -129,7 +225,7 @@ public:
 
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetAvailableChainsResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetAvailableChainsResponse : public Response
 {
 public:
     virtual ~PaymentGetAvailableChainsResponse() {}
@@ -142,7 +238,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetPaymentIntentRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetPaymentIntentRequest : public Request
 {
 public:
     virtual ~PaymentGetPaymentIntentRequest() {}
@@ -153,7 +249,7 @@ public:
 	FString Id;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentGetPaymentIntentResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentGetPaymentIntentResponse : public Response
 {
 public:
     virtual ~PaymentGetPaymentIntentResponse() {}
@@ -166,7 +262,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::PaymentUpdatePaymentIntentRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::PaymentUpdatePaymentIntentRequest : public Request
 {
 public:
     virtual ~PaymentUpdatePaymentIntentRequest() {}
@@ -178,7 +274,7 @@ public:
 	OpenAPICreatePaymentIntentInput OpenAPICreatePaymentIntentInput;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::PaymentUpdatePaymentIntentResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::PaymentUpdatePaymentIntentResponse : public Response
 {
 public:
     virtual ~PaymentUpdatePaymentIntentResponse() {}
@@ -191,7 +287,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIPaymentApi::TatumWebhookRequest : public Request
+class MOONSDK_API OpenAPIPaymentApi::TatumWebhookRequest : public Request
 {
 public:
     virtual ~TatumWebhookRequest() {}
@@ -199,10 +295,10 @@ public:
 	FString ComputePath() const final;
 
 	FString Id;
-	TSharedPtr<FJsonValue> Body;
+	OpenAPITatumTransactionEvent OpenAPITatumTransactionEvent;
 };
 
-class OPENAPI_API OpenAPIPaymentApi::TatumWebhookResponse : public Response
+class MOONSDK_API OpenAPIPaymentApi::TatumWebhookResponse : public Response
 {
 public:
     virtual ~TatumWebhookResponse() {}
@@ -210,6 +306,31 @@ public:
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
     TSharedPtr<FJsonValue> Content;
+};
+
+/* 
+
+*/
+class MOONSDK_API OpenAPIPaymentApi::UpdatePaymentIntentConfigRequest : public Request
+{
+public:
+    virtual ~UpdatePaymentIntentConfigRequest() {}
+	void SetupHttpRequest(const FHttpRequestRef& HttpRequest) const final;
+	FString ComputePath() const final;
+
+	FString Authorization;
+	FString Id;
+	TSharedPtr<FJsonValue> Body;
+};
+
+class MOONSDK_API OpenAPIPaymentApi::UpdatePaymentIntentConfigResponse : public Response
+{
+public:
+    virtual ~UpdatePaymentIntentConfigResponse() {}
+	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
+	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
+
+    OpenAPIPaymentIntentResponse Content;
 };
 
 }

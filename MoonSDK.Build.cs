@@ -14,9 +14,9 @@ using System;
 using System.IO;
 using UnrealBuildTool;
 
-public class OpenAPI : ModuleRules
+public class MoonSDK : ModuleRules
 {
-    public OpenAPI(ReadOnlyTargetRules Target) : base(Target)
+    public MoonSDK(ReadOnlyTargetRules Target) : base(Target)
     {
         PublicDependencyModuleNames.AddRange(
             new string[]

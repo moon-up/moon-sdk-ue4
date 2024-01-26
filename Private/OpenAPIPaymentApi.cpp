@@ -13,12 +13,12 @@
 #include "OpenAPIPaymentApi.h"
 
 #include "OpenAPIPaymentApiOperations.h"
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 OpenAPIPaymentApi::OpenAPIPaymentApi()
@@ -47,7 +47,7 @@ bool OpenAPIPaymentApi::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPIPaymentApi: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPIPaymentApi: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,12 +125,120 @@ void OpenAPIPaymentApi::HandleResponse(FHttpResponsePtr HttpResponse, bool bSucc
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 
 	// By default, assume we failed to establish connection
 	InOutResponse.SetHttpResponseCode(EHttpResponseCodes::RequestTimeout);
+}
+
+FHttpRequestPtr OpenAPIPaymentApi::CreatePaymentIntentConfig(const CreatePaymentIntentConfigRequest& Request, const FCreatePaymentIntentConfigDelegate& Delegate /*= FCreatePaymentIntentConfigDelegate()*/) const
+{
+	if (!IsValid())
+		return nullptr;
+
+	FHttpRequestRef HttpRequest = CreateHttpRequest(Request);
+	HttpRequest->SetURL(*(Url + Request.ComputePath()));
+
+	for(const auto& It : AdditionalHeaderParams)
+	{
+		HttpRequest->SetHeader(It.Key, It.Value);
+	}
+
+	Request.SetupHttpRequest(HttpRequest);
+
+	HttpRequest->OnProcessRequestComplete().BindRaw(this, &OpenAPIPaymentApi::OnCreatePaymentIntentConfigResponse, Delegate);
+	HttpRequest->ProcessRequest();
+	return HttpRequest;
+}
+
+void OpenAPIPaymentApi::OnCreatePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FCreatePaymentIntentConfigDelegate Delegate) const
+{
+	CreatePaymentIntentConfigResponse Response;
+	HandleResponse(HttpResponse, bSucceeded, Response);
+	Delegate.ExecuteIfBound(Response);
+}
+
+FHttpRequestPtr OpenAPIPaymentApi::DeletePaymentIntentConfig(const DeletePaymentIntentConfigRequest& Request, const FDeletePaymentIntentConfigDelegate& Delegate /*= FDeletePaymentIntentConfigDelegate()*/) const
+{
+	if (!IsValid())
+		return nullptr;
+
+	FHttpRequestRef HttpRequest = CreateHttpRequest(Request);
+	HttpRequest->SetURL(*(Url + Request.ComputePath()));
+
+	for(const auto& It : AdditionalHeaderParams)
+	{
+		HttpRequest->SetHeader(It.Key, It.Value);
+	}
+
+	Request.SetupHttpRequest(HttpRequest);
+
+	HttpRequest->OnProcessRequestComplete().BindRaw(this, &OpenAPIPaymentApi::OnDeletePaymentIntentConfigResponse, Delegate);
+	HttpRequest->ProcessRequest();
+	return HttpRequest;
+}
+
+void OpenAPIPaymentApi::OnDeletePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FDeletePaymentIntentConfigDelegate Delegate) const
+{
+	DeletePaymentIntentConfigResponse Response;
+	HandleResponse(HttpResponse, bSucceeded, Response);
+	Delegate.ExecuteIfBound(Response);
+}
+
+FHttpRequestPtr OpenAPIPaymentApi::GetAllPaymentIntentConfigs(const GetAllPaymentIntentConfigsRequest& Request, const FGetAllPaymentIntentConfigsDelegate& Delegate /*= FGetAllPaymentIntentConfigsDelegate()*/) const
+{
+	if (!IsValid())
+		return nullptr;
+
+	FHttpRequestRef HttpRequest = CreateHttpRequest(Request);
+	HttpRequest->SetURL(*(Url + Request.ComputePath()));
+
+	for(const auto& It : AdditionalHeaderParams)
+	{
+		HttpRequest->SetHeader(It.Key, It.Value);
+	}
+
+	Request.SetupHttpRequest(HttpRequest);
+
+	HttpRequest->OnProcessRequestComplete().BindRaw(this, &OpenAPIPaymentApi::OnGetAllPaymentIntentConfigsResponse, Delegate);
+	HttpRequest->ProcessRequest();
+	return HttpRequest;
+}
+
+void OpenAPIPaymentApi::OnGetAllPaymentIntentConfigsResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FGetAllPaymentIntentConfigsDelegate Delegate) const
+{
+	GetAllPaymentIntentConfigsResponse Response;
+	HandleResponse(HttpResponse, bSucceeded, Response);
+	Delegate.ExecuteIfBound(Response);
+}
+
+FHttpRequestPtr OpenAPIPaymentApi::GetOnePaymentIntentConfigs(const GetOnePaymentIntentConfigsRequest& Request, const FGetOnePaymentIntentConfigsDelegate& Delegate /*= FGetOnePaymentIntentConfigsDelegate()*/) const
+{
+	if (!IsValid())
+		return nullptr;
+
+	FHttpRequestRef HttpRequest = CreateHttpRequest(Request);
+	HttpRequest->SetURL(*(Url + Request.ComputePath()));
+
+	for(const auto& It : AdditionalHeaderParams)
+	{
+		HttpRequest->SetHeader(It.Key, It.Value);
+	}
+
+	Request.SetupHttpRequest(HttpRequest);
+
+	HttpRequest->OnProcessRequestComplete().BindRaw(this, &OpenAPIPaymentApi::OnGetOnePaymentIntentConfigsResponse, Delegate);
+	HttpRequest->ProcessRequest();
+	return HttpRequest;
+}
+
+void OpenAPIPaymentApi::OnGetOnePaymentIntentConfigsResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FGetOnePaymentIntentConfigsDelegate Delegate) const
+{
+	GetOnePaymentIntentConfigsResponse Response;
+	HandleResponse(HttpResponse, bSucceeded, Response);
+	Delegate.ExecuteIfBound(Response);
 }
 
 FHttpRequestPtr OpenAPIPaymentApi::MoralisWebhook(const MoralisWebhookRequest& Request, const FMoralisWebhookDelegate& Delegate /*= FMoralisWebhookDelegate()*/) const
@@ -345,6 +453,33 @@ FHttpRequestPtr OpenAPIPaymentApi::TatumWebhook(const TatumWebhookRequest& Reque
 void OpenAPIPaymentApi::OnTatumWebhookResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FTatumWebhookDelegate Delegate) const
 {
 	TatumWebhookResponse Response;
+	HandleResponse(HttpResponse, bSucceeded, Response);
+	Delegate.ExecuteIfBound(Response);
+}
+
+FHttpRequestPtr OpenAPIPaymentApi::UpdatePaymentIntentConfig(const UpdatePaymentIntentConfigRequest& Request, const FUpdatePaymentIntentConfigDelegate& Delegate /*= FUpdatePaymentIntentConfigDelegate()*/) const
+{
+	if (!IsValid())
+		return nullptr;
+
+	FHttpRequestRef HttpRequest = CreateHttpRequest(Request);
+	HttpRequest->SetURL(*(Url + Request.ComputePath()));
+
+	for(const auto& It : AdditionalHeaderParams)
+	{
+		HttpRequest->SetHeader(It.Key, It.Value);
+	}
+
+	Request.SetupHttpRequest(HttpRequest);
+
+	HttpRequest->OnProcessRequestComplete().BindRaw(this, &OpenAPIPaymentApi::OnUpdatePaymentIntentConfigResponse, Delegate);
+	HttpRequest->ProcessRequest();
+	return HttpRequest;
+}
+
+void OpenAPIPaymentApi::OnUpdatePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FUpdatePaymentIntentConfigDelegate Delegate) const
+{
+	UpdatePaymentIntentConfigResponse Response;
 	HandleResponse(HttpResponse, bSucceeded, Response);
 	Delegate.ExecuteIfBound(Response);
 }

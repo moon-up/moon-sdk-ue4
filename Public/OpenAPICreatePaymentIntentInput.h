@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,13 +22,14 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPICreatePaymentIntentInput : public Model
+class MOONSDK_API OpenAPICreatePaymentIntentInput : public Model
 {
 public:
     virtual ~OpenAPICreatePaymentIntentInput() {}
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
+	TOptional<FString> Config;
 	TMap<FString, FString> Metadata;
 	TOptional<FString> Network;
 	double Amount = 0.0;

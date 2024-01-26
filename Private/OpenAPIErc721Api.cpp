@@ -13,12 +13,12 @@
 #include "OpenAPIErc721Api.h"
 
 #include "OpenAPIErc721ApiOperations.h"
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 OpenAPIErc721Api::OpenAPIErc721Api()
@@ -47,7 +47,7 @@ bool OpenAPIErc721Api::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPIErc721Api: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPIErc721Api: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,7 +125,7 @@ void OpenAPIErc721Api::HandleResponse(FHttpResponsePtr HttpResponse, bool bSucce
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 

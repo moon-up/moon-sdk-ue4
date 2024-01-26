@@ -19,13 +19,13 @@
 #include "OpenAPITronInput.h"
 #include "OpenAPITronTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPITronApi::CreateTronAccountRequest : public Request
+class MOONSDK_API OpenAPITronApi::CreateTronAccountRequest : public Request
 {
 public:
     virtual ~CreateTronAccountRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPITronInput OpenAPITronInput;
 };
 
-class OPENAPI_API OpenAPITronApi::CreateTronAccountResponse : public Response
+class MOONSDK_API OpenAPITronApi::CreateTronAccountResponse : public Response
 {
 public:
     virtual ~CreateTronAccountResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPITronApi::GetTronAccountRequest : public Request
+class MOONSDK_API OpenAPITronApi::GetTronAccountRequest : public Request
 {
 public:
     virtual ~GetTronAccountRequest() {}
@@ -60,7 +60,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPITronApi::GetTronAccountResponse : public Response
+class MOONSDK_API OpenAPITronApi::GetTronAccountResponse : public Response
 {
 public:
     virtual ~GetTronAccountResponse() {}
@@ -73,7 +73,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPITronApi::ListTronAccountsRequest : public Request
+class MOONSDK_API OpenAPITronApi::ListTronAccountsRequest : public Request
 {
 public:
     virtual ~ListTronAccountsRequest() {}
@@ -83,7 +83,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPITronApi::ListTronAccountsResponse : public Response
+class MOONSDK_API OpenAPITronApi::ListTronAccountsResponse : public Response
 {
 public:
     virtual ~ListTronAccountsResponse() {}
@@ -96,7 +96,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPITronApi::SignTronTransactionRequest : public Request
+class MOONSDK_API OpenAPITronApi::SignTronTransactionRequest : public Request
 {
 public:
     virtual ~SignTronTransactionRequest() {}
@@ -108,7 +108,7 @@ public:
 	OpenAPITronTransactionInput OpenAPITronTransactionInput;
 };
 
-class OPENAPI_API OpenAPITronApi::SignTronTransactionResponse : public Response
+class MOONSDK_API OpenAPITronApi::SignTronTransactionResponse : public Response
 {
 public:
     virtual ~SignTronTransactionResponse() {}

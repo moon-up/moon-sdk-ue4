@@ -12,7 +12,7 @@
 
 #include "OpenAPITronApiOperations.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Dom/JsonObject.h"
@@ -20,7 +20,7 @@
 #include "HttpModule.h"
 #include "PlatformHttp.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 FString OpenAPITronApi::CreateTronAccountRequest::ComputePath() const
@@ -54,15 +54,15 @@ void OpenAPITronApi::CreateTronAccountRequest::SetupHttpRequest(const FHttpReque
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPITronInput) was ignored, not supported in multipart form"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPITronInput) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPITronInput) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPITronInput) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -189,15 +189,15 @@ void OpenAPITronApi::SignTronTransactionRequest::SetupHttpRequest(const FHttpReq
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPITronTransactionInput) was ignored, not supported in multipart form"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPITronTransactionInput) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPITronTransactionInput) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPITronTransactionInput) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 

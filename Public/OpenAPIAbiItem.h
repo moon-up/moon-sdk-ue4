@@ -16,7 +16,7 @@
 #include "OpenAPIAbiInput.h"
 #include "OpenAPIAbiOutput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * The abi to parse the log object of the contract
  */
-class OPENAPI_API OpenAPIAbiItem : public Model
+class MOONSDK_API OpenAPIAbiItem : public Model
 {
 public:
     virtual ~OpenAPIAbiItem() {}

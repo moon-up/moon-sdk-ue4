@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,7 +22,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIDogeCoinInput : public Model
+class MOONSDK_API OpenAPIDogeCoinInput : public Model
 {
 public:
     virtual ~OpenAPIDogeCoinInput() {}

@@ -18,13 +18,13 @@
 #include "OpenAPIAccountControllerResponse.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIYearnApi::AddLiquidityRequest : public Request
+class MOONSDK_API OpenAPIYearnApi::AddLiquidityRequest : public Request
 {
 public:
     virtual ~AddLiquidityRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIYearnApi::AddLiquidityResponse : public Response
+class MOONSDK_API OpenAPIYearnApi::AddLiquidityResponse : public Response
 {
 public:
     virtual ~AddLiquidityResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIYearnApi::AddLiquidityWethRequest : public Request
+class MOONSDK_API OpenAPIYearnApi::AddLiquidityWethRequest : public Request
 {
 public:
     virtual ~AddLiquidityWethRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIYearnApi::AddLiquidityWethResponse : public Response
+class MOONSDK_API OpenAPIYearnApi::AddLiquidityWethResponse : public Response
 {
 public:
     virtual ~AddLiquidityWethResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIYearnApi::RemoveLiquidityRequest : public Request
+class MOONSDK_API OpenAPIYearnApi::RemoveLiquidityRequest : public Request
 {
 public:
     virtual ~RemoveLiquidityRequest() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIYearnApi::RemoveLiquidityResponse : public Response
+class MOONSDK_API OpenAPIYearnApi::RemoveLiquidityResponse : public Response
 {
 public:
     virtual ~RemoveLiquidityResponse() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIYearnApi::RemoveLiquidityWethRequest : public Request
+class MOONSDK_API OpenAPIYearnApi::RemoveLiquidityWethRequest : public Request
 {
 public:
     virtual ~RemoveLiquidityWethRequest() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIYearnApi::RemoveLiquidityWethResponse : public Response
+class MOONSDK_API OpenAPIYearnApi::RemoveLiquidityWethResponse : public Response
 {
 public:
     virtual ~RemoveLiquidityWethResponse() {}

@@ -12,12 +12,12 @@
 
 #include "OpenAPIDeployInput.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIDeployInput::WriteJson(JsonWriter& Writer) const

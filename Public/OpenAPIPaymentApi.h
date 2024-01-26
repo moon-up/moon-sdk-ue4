@@ -15,10 +15,10 @@
 #include "CoreMinimal.h"
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
-class OPENAPI_API OpenAPIPaymentApi
+class MOONSDK_API OpenAPIPaymentApi
 {
 public:
 	OpenAPIPaymentApi();
@@ -38,6 +38,14 @@ public:
 	void SetHttpRetryManager(FHttpRetrySystem::FManager& RetryManager);
 	FHttpRetrySystem::FManager& GetHttpRetryManager();
 
+	class CreatePaymentIntentConfigRequest;
+	class CreatePaymentIntentConfigResponse;
+	class DeletePaymentIntentConfigRequest;
+	class DeletePaymentIntentConfigResponse;
+	class GetAllPaymentIntentConfigsRequest;
+	class GetAllPaymentIntentConfigsResponse;
+	class GetOnePaymentIntentConfigsRequest;
+	class GetOnePaymentIntentConfigsResponse;
 	class MoralisWebhookRequest;
 	class MoralisWebhookResponse;
 	class PaymentCreatePaymentIntentRequest;
@@ -54,7 +62,13 @@ public:
 	class PaymentUpdatePaymentIntentResponse;
 	class TatumWebhookRequest;
 	class TatumWebhookResponse;
+	class UpdatePaymentIntentConfigRequest;
+	class UpdatePaymentIntentConfigResponse;
 	
+    DECLARE_DELEGATE_OneParam(FCreatePaymentIntentConfigDelegate, const CreatePaymentIntentConfigResponse&);
+    DECLARE_DELEGATE_OneParam(FDeletePaymentIntentConfigDelegate, const DeletePaymentIntentConfigResponse&);
+    DECLARE_DELEGATE_OneParam(FGetAllPaymentIntentConfigsDelegate, const GetAllPaymentIntentConfigsResponse&);
+    DECLARE_DELEGATE_OneParam(FGetOnePaymentIntentConfigsDelegate, const GetOnePaymentIntentConfigsResponse&);
     DECLARE_DELEGATE_OneParam(FMoralisWebhookDelegate, const MoralisWebhookResponse&);
     DECLARE_DELEGATE_OneParam(FPaymentCreatePaymentIntentDelegate, const PaymentCreatePaymentIntentResponse&);
     DECLARE_DELEGATE_OneParam(FPaymentDeletePaymentIntentDelegate, const PaymentDeletePaymentIntentResponse&);
@@ -63,7 +77,12 @@ public:
     DECLARE_DELEGATE_OneParam(FPaymentGetPaymentIntentDelegate, const PaymentGetPaymentIntentResponse&);
     DECLARE_DELEGATE_OneParam(FPaymentUpdatePaymentIntentDelegate, const PaymentUpdatePaymentIntentResponse&);
     DECLARE_DELEGATE_OneParam(FTatumWebhookDelegate, const TatumWebhookResponse&);
+    DECLARE_DELEGATE_OneParam(FUpdatePaymentIntentConfigDelegate, const UpdatePaymentIntentConfigResponse&);
     
+    FHttpRequestPtr CreatePaymentIntentConfig(const CreatePaymentIntentConfigRequest& Request, const FCreatePaymentIntentConfigDelegate& Delegate = FCreatePaymentIntentConfigDelegate()) const;
+    FHttpRequestPtr DeletePaymentIntentConfig(const DeletePaymentIntentConfigRequest& Request, const FDeletePaymentIntentConfigDelegate& Delegate = FDeletePaymentIntentConfigDelegate()) const;
+    FHttpRequestPtr GetAllPaymentIntentConfigs(const GetAllPaymentIntentConfigsRequest& Request, const FGetAllPaymentIntentConfigsDelegate& Delegate = FGetAllPaymentIntentConfigsDelegate()) const;
+    FHttpRequestPtr GetOnePaymentIntentConfigs(const GetOnePaymentIntentConfigsRequest& Request, const FGetOnePaymentIntentConfigsDelegate& Delegate = FGetOnePaymentIntentConfigsDelegate()) const;
     FHttpRequestPtr MoralisWebhook(const MoralisWebhookRequest& Request, const FMoralisWebhookDelegate& Delegate = FMoralisWebhookDelegate()) const;
     FHttpRequestPtr PaymentCreatePaymentIntent(const PaymentCreatePaymentIntentRequest& Request, const FPaymentCreatePaymentIntentDelegate& Delegate = FPaymentCreatePaymentIntentDelegate()) const;
     FHttpRequestPtr PaymentDeletePaymentIntent(const PaymentDeletePaymentIntentRequest& Request, const FPaymentDeletePaymentIntentDelegate& Delegate = FPaymentDeletePaymentIntentDelegate()) const;
@@ -72,8 +91,13 @@ public:
     FHttpRequestPtr PaymentGetPaymentIntent(const PaymentGetPaymentIntentRequest& Request, const FPaymentGetPaymentIntentDelegate& Delegate = FPaymentGetPaymentIntentDelegate()) const;
     FHttpRequestPtr PaymentUpdatePaymentIntent(const PaymentUpdatePaymentIntentRequest& Request, const FPaymentUpdatePaymentIntentDelegate& Delegate = FPaymentUpdatePaymentIntentDelegate()) const;
     FHttpRequestPtr TatumWebhook(const TatumWebhookRequest& Request, const FTatumWebhookDelegate& Delegate = FTatumWebhookDelegate()) const;
+    FHttpRequestPtr UpdatePaymentIntentConfig(const UpdatePaymentIntentConfigRequest& Request, const FUpdatePaymentIntentConfigDelegate& Delegate = FUpdatePaymentIntentConfigDelegate()) const;
     
 private:
+    void OnCreatePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FCreatePaymentIntentConfigDelegate Delegate) const;
+    void OnDeletePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FDeletePaymentIntentConfigDelegate Delegate) const;
+    void OnGetAllPaymentIntentConfigsResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FGetAllPaymentIntentConfigsDelegate Delegate) const;
+    void OnGetOnePaymentIntentConfigsResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FGetOnePaymentIntentConfigsDelegate Delegate) const;
     void OnMoralisWebhookResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FMoralisWebhookDelegate Delegate) const;
     void OnPaymentCreatePaymentIntentResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FPaymentCreatePaymentIntentDelegate Delegate) const;
     void OnPaymentDeletePaymentIntentResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FPaymentDeletePaymentIntentDelegate Delegate) const;
@@ -82,6 +106,7 @@ private:
     void OnPaymentGetPaymentIntentResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FPaymentGetPaymentIntentDelegate Delegate) const;
     void OnPaymentUpdatePaymentIntentResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FPaymentUpdatePaymentIntentDelegate Delegate) const;
     void OnTatumWebhookResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FTatumWebhookDelegate Delegate) const;
+    void OnUpdatePaymentIntentConfigResponse(FHttpRequestPtr HttpRequest, FHttpResponsePtr HttpResponse, bool bSucceeded, FUpdatePaymentIntentConfigDelegate Delegate) const;
     
 	FHttpRequestRef CreateHttpRequest(const Request& Request) const;
 	bool IsValid() const;

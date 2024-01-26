@@ -30,7 +30,7 @@
 #include "OpenAPITransactionRequest.h"
 #include "OpenAPITx.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -38,7 +38,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIAccountControllerResponseData : public Model
+class MOONSDK_API OpenAPIAccountControllerResponseData : public Model
 {
 public:
     virtual ~OpenAPIAccountControllerResponseData() {}

@@ -1,4 +1,6 @@
-OpenAPI.Build.cs
+MoonSDK.Build.cs
+Private/MoonSDKModule.cpp
+Private/MoonSDKModule.h
 Private/OpenAPIAaveApi.cpp
 Private/OpenAPIAaveApiOperations.cpp
 Private/OpenAPIAaveInput.cpp
@@ -89,8 +91,6 @@ Private/OpenAPILitecoinInput.cpp
 Private/OpenAPILitecoinTransactionInput.cpp
 Private/OpenAPILog.cpp
 Private/OpenAPIMessage.cpp
-Private/OpenAPIModule.cpp
-Private/OpenAPIModule.h
 Private/OpenAPINonceResponse.cpp
 Private/OpenAPIOneinchApi.cpp
 Private/OpenAPIOneinchApiOperations.cpp
@@ -121,6 +121,7 @@ Private/OpenAPISupportedDefaultResponseDefaults.cpp
 Private/OpenAPISupportedDefaultResponseDefaultsId.cpp
 Private/OpenAPISupportedPaymentTypesCurrencyResponse.cpp
 Private/OpenAPISupportedPaymentTypesMessage.cpp
+Private/OpenAPITatumTransactionEvent.cpp
 Private/OpenAPITokenSwapParams.cpp
 Private/OpenAPITransaction.cpp
 Private/OpenAPITransactionData.cpp
@@ -266,6 +267,7 @@ Public/OpenAPISupportedDefaultResponseDefaults.h
 Public/OpenAPISupportedDefaultResponseDefaultsId.h
 Public/OpenAPISupportedPaymentTypesCurrencyResponse.h
 Public/OpenAPISupportedPaymentTypesMessage.h
+Public/OpenAPITatumTransactionEvent.h
 Public/OpenAPITokenSwapParams.h
 Public/OpenAPITransaction.h
 Public/OpenAPITransactionData.h

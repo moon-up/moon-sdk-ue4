@@ -17,7 +17,7 @@
 #include "OpenAPITransactionInputSupportedParams.h"
 #include "OpenAPITransactionInputWallet.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -25,7 +25,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPITransactionInput : public Model
+class MOONSDK_API OpenAPITransactionInput : public Model
 {
 public:
     virtual ~OpenAPITransactionInput() {}

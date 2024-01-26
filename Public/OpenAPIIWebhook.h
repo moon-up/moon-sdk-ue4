@@ -25,7 +25,7 @@
 #include "OpenAPILog.h"
 #include "OpenAPITransaction.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -33,7 +33,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIIWebhook : public Model
+class MOONSDK_API OpenAPIIWebhook : public Model
 {
 public:
     virtual ~OpenAPIIWebhook() {}

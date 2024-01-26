@@ -16,9 +16,9 @@
 #include "Modules/ModuleManager.h"
 #include "Logging/LogMacros.h"
 
-DECLARE_LOG_CATEGORY_EXTERN(LogOpenAPI, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(LogMoonSDK, Log, All);
 
-class OPENAPI_API OpenAPIModule : public IModuleInterface
+class MOONSDK_API MoonSDKModule : public IModuleInterface
 {
 public:
 	void StartupModule() final;

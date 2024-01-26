@@ -10,15 +10,15 @@
  * Do not edit the class manually.
  */
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 
-IMPLEMENT_MODULE(OpenAPIModule, OpenAPI);
-DEFINE_LOG_CATEGORY(LogOpenAPI);
+IMPLEMENT_MODULE(MoonSDKModule, MoonSDK);
+DEFINE_LOG_CATEGORY(LogMoonSDK);
 
-void OpenAPIModule::StartupModule()
+void MoonSDKModule::StartupModule()
 {
 }
 
-void OpenAPIModule::ShutdownModule()
+void MoonSDKModule::ShutdownModule()
 {
 }

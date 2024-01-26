@@ -16,7 +16,7 @@
 #include "OpenAPIINFTApprovalERC1155.h"
 #include "OpenAPIINFTApprovalERC721.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIIOldNFTApproval : public Model
+class MOONSDK_API OpenAPIIOldNFTApproval : public Model
 {
 public:
     virtual ~OpenAPIIOldNFTApproval() {}

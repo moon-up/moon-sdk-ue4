@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,7 +22,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPITx : public Model
+class MOONSDK_API OpenAPITx : public Model
 {
 public:
     virtual ~OpenAPITx() {}

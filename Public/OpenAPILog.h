@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPITriggerOutput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -23,7 +23,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPILog : public Model
+class MOONSDK_API OpenAPILog : public Model
 {
 public:
     virtual ~OpenAPILog() {}

@@ -18,13 +18,13 @@
 #include "OpenAPIAccountControllerResponse.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIErc4337Api::GetAddressRequest : public Request
+class MOONSDK_API OpenAPIErc4337Api::GetAddressRequest : public Request
 {
 public:
     virtual ~GetAddressRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIErc4337Api::GetAddressResponse : public Response
+class MOONSDK_API OpenAPIErc4337Api::GetAddressResponse : public Response
 {
 public:
     virtual ~GetAddressResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIErc4337Api::SignBroadcastUserOpTxRequest : public Request
+class MOONSDK_API OpenAPIErc4337Api::SignBroadcastUserOpTxRequest : public Request
 {
 public:
     virtual ~SignBroadcastUserOpTxRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIErc4337Api::SignBroadcastUserOpTxResponse : public Response
+class MOONSDK_API OpenAPIErc4337Api::SignBroadcastUserOpTxResponse : public Response
 {
 public:
     virtual ~SignBroadcastUserOpTxResponse() {}

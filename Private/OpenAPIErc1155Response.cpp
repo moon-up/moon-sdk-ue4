@@ -12,12 +12,12 @@
 
 #include "OpenAPIErc1155Response.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIErc1155Response::WriteJson(JsonWriter& Writer) const

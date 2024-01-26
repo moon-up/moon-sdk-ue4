@@ -21,14 +21,14 @@
 
 class IHttpRequest;
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 typedef TSharedRef<TJsonWriter<>> JsonWriter;
 
 //////////////////////////////////////////////////////////////////////////
 
-class OPENAPI_API HttpFileInput
+class MOONSDK_API HttpFileInput
 {
 public:
 	explicit HttpFileInput(const TCHAR* InFilePath);
@@ -297,7 +297,7 @@ inline bool TryGetJsonValue(const TSharedPtr<FJsonValue>& JsonValue, FString& Va
 		return false;
 }
 
-OPENAPI_API bool ParseDateTime(const FString& DateTimeString, FDateTime& OutDateTime);
+MOONSDK_API bool ParseDateTime(const FString& DateTimeString, FDateTime& OutDateTime);
 
 inline bool TryGetJsonValue(const TSharedPtr<FJsonValue>& JsonValue, FDateTime& Value)
 {

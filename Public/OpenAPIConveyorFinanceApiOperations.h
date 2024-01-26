@@ -18,13 +18,13 @@
 #include "OpenAPIConveyorFinanceControllerResponse.h"
 #include "OpenAPITokenSwapParams.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIConveyorFinanceApi::SwapRequest : public Request
+class MOONSDK_API OpenAPIConveyorFinanceApi::SwapRequest : public Request
 {
 public:
     virtual ~SwapRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPITokenSwapParams OpenAPITokenSwapParams;
 };
 
-class OPENAPI_API OpenAPIConveyorFinanceApi::SwapResponse : public Response
+class MOONSDK_API OpenAPIConveyorFinanceApi::SwapResponse : public Response
 {
 public:
     virtual ~SwapResponse() {}

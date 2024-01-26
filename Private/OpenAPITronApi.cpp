@@ -13,12 +13,12 @@
 #include "OpenAPITronApi.h"
 
 #include "OpenAPITronApiOperations.h"
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 OpenAPITronApi::OpenAPITronApi()
@@ -47,7 +47,7 @@ bool OpenAPITronApi::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPITronApi: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPITronApi: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,7 +125,7 @@ void OpenAPITronApi::HandleResponse(FHttpResponsePtr HttpResponse, bool bSucceed
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 

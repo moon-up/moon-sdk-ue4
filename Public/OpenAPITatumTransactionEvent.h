@@ -18,25 +18,27 @@ namespace MoonSDK
 {
 
 /*
- * OpenAPITransactionInputSupportedParamsTheme
+ * OpenAPITatumTransactionEvent
  *
  * 
  */
-class MOONSDK_API OpenAPITransactionInputSupportedParamsTheme : public Model
+class MOONSDK_API OpenAPITatumTransactionEvent : public Model
 {
 public:
-    virtual ~OpenAPITransactionInputSupportedParamsTheme() {}
+    virtual ~OpenAPITatumTransactionEvent() {}
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	double BorderRadius = 0.0;
-	FString CardColor;
-	FString SecondaryTextColor;
-	FString PrimaryTextColor;
-	FString SecondaryColor;
-	FString PrimaryColor;
-	FString ThemeName;
-	bool IsDark = false;
+	FString Amount;
+	bool Test = false;
+	FString CounterAddress;
+	FString Address;
+	bool Mempool = false;
+	FString SubscriptionType;
+	double BlockNumber = 0.0;
+	FString TxId;
+	FString Chain;
+	FString Currency;
 };
 
 }

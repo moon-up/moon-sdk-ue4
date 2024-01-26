@@ -12,12 +12,12 @@
 
 #include "OpenAPIBitcoinInput.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIBitcoinInput::WriteJson(JsonWriter& Writer) const

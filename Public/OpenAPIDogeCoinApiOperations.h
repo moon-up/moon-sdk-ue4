@@ -19,13 +19,13 @@
 #include "OpenAPIDogeCoinInput.h"
 #include "OpenAPIDogeCoinTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIDogeCoinApi::CreateDogeCoinAccountRequest : public Request
+class MOONSDK_API OpenAPIDogeCoinApi::CreateDogeCoinAccountRequest : public Request
 {
 public:
     virtual ~CreateDogeCoinAccountRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIDogeCoinInput OpenAPIDogeCoinInput;
 };
 
-class OPENAPI_API OpenAPIDogeCoinApi::CreateDogeCoinAccountResponse : public Response
+class MOONSDK_API OpenAPIDogeCoinApi::CreateDogeCoinAccountResponse : public Response
 {
 public:
     virtual ~CreateDogeCoinAccountResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIDogeCoinApi::GetDogeCoinAccountRequest : public Request
+class MOONSDK_API OpenAPIDogeCoinApi::GetDogeCoinAccountRequest : public Request
 {
 public:
     virtual ~GetDogeCoinAccountRequest() {}
@@ -60,7 +60,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPIDogeCoinApi::GetDogeCoinAccountResponse : public Response
+class MOONSDK_API OpenAPIDogeCoinApi::GetDogeCoinAccountResponse : public Response
 {
 public:
     virtual ~GetDogeCoinAccountResponse() {}
@@ -73,7 +73,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIDogeCoinApi::ListDogeCoinAccountsRequest : public Request
+class MOONSDK_API OpenAPIDogeCoinApi::ListDogeCoinAccountsRequest : public Request
 {
 public:
     virtual ~ListDogeCoinAccountsRequest() {}
@@ -83,7 +83,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIDogeCoinApi::ListDogeCoinAccountsResponse : public Response
+class MOONSDK_API OpenAPIDogeCoinApi::ListDogeCoinAccountsResponse : public Response
 {
 public:
     virtual ~ListDogeCoinAccountsResponse() {}
@@ -96,7 +96,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIDogeCoinApi::SignDogeCoinTransactionRequest : public Request
+class MOONSDK_API OpenAPIDogeCoinApi::SignDogeCoinTransactionRequest : public Request
 {
 public:
     virtual ~SignDogeCoinTransactionRequest() {}
@@ -108,7 +108,7 @@ public:
 	OpenAPIDogeCoinTransactionInput OpenAPIDogeCoinTransactionInput;
 };
 
-class OPENAPI_API OpenAPIDogeCoinApi::SignDogeCoinTransactionResponse : public Response
+class MOONSDK_API OpenAPIDogeCoinApi::SignDogeCoinTransactionResponse : public Response
 {
 public:
     virtual ~SignDogeCoinTransactionResponse() {}

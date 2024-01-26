@@ -18,13 +18,13 @@
 #include "OpenAPIAaveInput.h"
 #include "OpenAPIAccountControllerResponse.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIAaveApi::BorrowRequest : public Request
+class MOONSDK_API OpenAPIAaveApi::BorrowRequest : public Request
 {
 public:
     virtual ~BorrowRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIAaveInput OpenAPIAaveInput;
 };
 
-class OPENAPI_API OpenAPIAaveApi::BorrowResponse : public Response
+class MOONSDK_API OpenAPIAaveApi::BorrowResponse : public Response
 {
 public:
     virtual ~BorrowResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAaveApi::LendRequest : public Request
+class MOONSDK_API OpenAPIAaveApi::LendRequest : public Request
 {
 public:
     virtual ~LendRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIAaveInput OpenAPIAaveInput;
 };
 
-class OPENAPI_API OpenAPIAaveApi::LendResponse : public Response
+class MOONSDK_API OpenAPIAaveApi::LendResponse : public Response
 {
 public:
     virtual ~LendResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAaveApi::RepayRequest : public Request
+class MOONSDK_API OpenAPIAaveApi::RepayRequest : public Request
 {
 public:
     virtual ~RepayRequest() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIAaveInput OpenAPIAaveInput;
 };
 
-class OPENAPI_API OpenAPIAaveApi::RepayResponse : public Response
+class MOONSDK_API OpenAPIAaveApi::RepayResponse : public Response
 {
 public:
     virtual ~RepayResponse() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAaveApi::UserReserveDataRequest : public Request
+class MOONSDK_API OpenAPIAaveApi::UserReserveDataRequest : public Request
 {
 public:
     virtual ~UserReserveDataRequest() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIAaveInput OpenAPIAaveInput;
 };
 
-class OPENAPI_API OpenAPIAaveApi::UserReserveDataResponse : public Response
+class MOONSDK_API OpenAPIAaveApi::UserReserveDataResponse : public Response
 {
 public:
     virtual ~UserReserveDataResponse() {}

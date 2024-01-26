@@ -12,12 +12,12 @@
 
 #include "OpenAPIIOldNFTApproval.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIIOldNFTApproval::WriteJson(JsonWriter& Writer) const

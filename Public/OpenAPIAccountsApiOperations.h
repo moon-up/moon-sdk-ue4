@@ -23,13 +23,13 @@
 #include "OpenAPISignMessage.h"
 #include "OpenAPISignTypedData.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::BroadcastTxRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::BroadcastTxRequest : public Request
 {
 public:
     virtual ~BroadcastTxRequest() {}
@@ -41,7 +41,7 @@ public:
 	OpenAPIBroadcastInput OpenAPIBroadcastInput;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::BroadcastTxResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::BroadcastTxResponse : public Response
 {
 public:
     virtual ~BroadcastTxResponse() {}
@@ -54,7 +54,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::CreateAccountRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::CreateAccountRequest : public Request
 {
 public:
     virtual ~CreateAccountRequest() {}
@@ -65,7 +65,7 @@ public:
 	OpenAPICreateAccountInput OpenAPICreateAccountInput;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::CreateAccountResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::CreateAccountResponse : public Response
 {
 public:
     virtual ~CreateAccountResponse() {}
@@ -78,7 +78,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::DeleteAccountRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::DeleteAccountRequest : public Request
 {
 public:
     virtual ~DeleteAccountRequest() {}
@@ -89,7 +89,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::DeleteAccountResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::DeleteAccountResponse : public Response
 {
 public:
     virtual ~DeleteAccountResponse() {}
@@ -102,7 +102,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::DeployContractRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::DeployContractRequest : public Request
 {
 public:
     virtual ~DeployContractRequest() {}
@@ -114,7 +114,7 @@ public:
 	OpenAPIDeployInput OpenAPIDeployInput;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::DeployContractResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::DeployContractResponse : public Response
 {
 public:
     virtual ~DeployContractResponse() {}
@@ -127,7 +127,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::GetAccountRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::GetAccountRequest : public Request
 {
 public:
     virtual ~GetAccountRequest() {}
@@ -138,7 +138,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::GetAccountResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::GetAccountResponse : public Response
 {
 public:
     virtual ~GetAccountResponse() {}
@@ -151,7 +151,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::GetBalanceRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::GetBalanceRequest : public Request
 {
 public:
     virtual ~GetBalanceRequest() {}
@@ -163,7 +163,7 @@ public:
 	FString ChainId;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::GetBalanceResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::GetBalanceResponse : public Response
 {
 public:
     virtual ~GetBalanceResponse() {}
@@ -176,7 +176,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::GetNonceRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::GetNonceRequest : public Request
 {
 public:
     virtual ~GetNonceRequest() {}
@@ -187,7 +187,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::GetNonceResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::GetNonceResponse : public Response
 {
 public:
     virtual ~GetNonceResponse() {}
@@ -200,7 +200,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::ListAccountsRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::ListAccountsRequest : public Request
 {
 public:
     virtual ~ListAccountsRequest() {}
@@ -210,7 +210,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::ListAccountsResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::ListAccountsResponse : public Response
 {
 public:
     virtual ~ListAccountsResponse() {}
@@ -223,7 +223,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::SignMessageRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::SignMessageRequest : public Request
 {
 public:
     virtual ~SignMessageRequest() {}
@@ -235,7 +235,7 @@ public:
 	OpenAPISignMessage OpenAPISignMessage;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::SignMessageResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::SignMessageResponse : public Response
 {
 public:
     virtual ~SignMessageResponse() {}
@@ -248,7 +248,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::SignTransactionRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::SignTransactionRequest : public Request
 {
 public:
     virtual ~SignTransactionRequest() {}
@@ -260,7 +260,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::SignTransactionResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::SignTransactionResponse : public Response
 {
 public:
     virtual ~SignTransactionResponse() {}
@@ -273,7 +273,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::SignTypedDataRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::SignTypedDataRequest : public Request
 {
 public:
     virtual ~SignTypedDataRequest() {}
@@ -285,7 +285,7 @@ public:
 	OpenAPISignTypedData OpenAPISignTypedData;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::SignTypedDataResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::SignTypedDataResponse : public Response
 {
 public:
     virtual ~SignTypedDataResponse() {}
@@ -298,7 +298,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIAccountsApi::TransferEthRequest : public Request
+class MOONSDK_API OpenAPIAccountsApi::TransferEthRequest : public Request
 {
 public:
     virtual ~TransferEthRequest() {}
@@ -310,7 +310,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class OPENAPI_API OpenAPIAccountsApi::TransferEthResponse : public Response
+class MOONSDK_API OpenAPIAccountsApi::TransferEthResponse : public Response
 {
 public:
     virtual ~TransferEthResponse() {}
