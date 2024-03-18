@@ -15,7 +15,8 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIEosApi.h"
 
-#include "OpenAPIAccountControllerResponse.h"
+#include "OpenAPIAccountAPIResponse.h"
+#include "OpenAPIEosAPIResponse.h"
 #include "OpenAPIEosInput.h"
 #include "OpenAPIEosTransactionInput.h"
 
@@ -43,7 +44,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPIAccountAPIResponse Content;
 };
 
 /* 
@@ -67,7 +68,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPIAccountAPIResponse Content;
 };
 
 /* 
@@ -90,7 +91,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPIAccountAPIResponse Content;
 };
 
 /* 
@@ -115,7 +116,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPIEosAPIResponse Content;
 };
 
 }

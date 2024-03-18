@@ -15,8 +15,8 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIErc20Api.h"
 
-#include "OpenAPIAccountControllerResponse.h"
 #include "OpenAPIInputBody.h"
+#include "OpenAPITransactionAPIResponse.h"
 
 namespace MoonSDK
 {
@@ -43,7 +43,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -68,7 +68,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -93,7 +93,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -118,7 +118,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -143,7 +143,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -168,7 +168,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -193,7 +193,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -218,7 +218,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -243,7 +243,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 }

@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIUniSwapApi.h"
 
-#include "OpenAPIAccountControllerResponse.h"
+#include "OpenAPITransactionAPIResponse.h"
 #include "OpenAPIUniswapInput.h"
 
 namespace MoonSDK
@@ -43,7 +43,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -68,7 +68,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -93,7 +93,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 /* 
@@ -118,7 +118,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPITransactionAPIResponse Content;
 };
 
 }

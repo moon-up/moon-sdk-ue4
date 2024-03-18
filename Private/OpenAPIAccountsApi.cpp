@@ -22,7 +22,7 @@ namespace MoonSDK
 {
 
 OpenAPIAccountsApi::OpenAPIAccountsApi()
-: Url(TEXT("https://vault-api.usemoon.ai"))
+: Url(TEXT("https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"))
 {
 }
 

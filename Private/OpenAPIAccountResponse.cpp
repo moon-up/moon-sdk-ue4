@@ -23,14 +23,7 @@ namespace MoonSDK
 void OpenAPIAccountResponse::WriteJson(JsonWriter& Writer) const
 {
 	Writer->WriteObjectStart();
-	if (Keys.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("keys")); WriteJsonValue(Writer, Keys.GetValue());
-	}
-	if (Address.IsSet())
-	{
-		Writer->WriteIdentifierPrefix(TEXT("address")); WriteJsonValue(Writer, Address.GetValue());
-	}
+	Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data);
 	Writer->WriteObjectEnd();
 }
 
@@ -42,8 +35,7 @@ bool OpenAPIAccountResponse::FromJson(const TSharedPtr<FJsonValue>& JsonValue)
 
 	bool ParseSuccess = true;
 
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("keys"), Keys);
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("address"), Address);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
 
 	return ParseSuccess;
 }

@@ -13,6 +13,7 @@
 #pragma once
 
 #include "OpenAPIBaseModel.h"
+#include "OpenAPIAccountData.h"
 
 namespace MoonSDK
 {
@@ -29,8 +30,7 @@ public:
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	TOptional<TArray<FString>> Keys;
-	TOptional<FString> Address;
+	OpenAPIAccountData Data;
 };
 
 }

@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIENSApi.h"
 
-#include "OpenAPIAccountControllerResponse.h"
+#include "OpenAPIEnsResolveAPIResponse.h"
 #include "OpenAPIEnsResolveInput.h"
 
 namespace MoonSDK
@@ -42,7 +42,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIAccountControllerResponse Content;
+    OpenAPIEnsResolveAPIResponse Content;
 };
 
 }
