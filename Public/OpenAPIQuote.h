@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIAvailablePaymentMethod.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIQuote : public Model
+class OPENAPI_API OpenAPIQuote : public Model
 {
 public:
     virtual ~OpenAPIQuote() {}

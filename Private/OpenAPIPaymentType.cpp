@@ -12,12 +12,12 @@
 
 #include "OpenAPIPaymentType.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 void OpenAPIPaymentType::WriteJson(JsonWriter& Writer) const

@@ -12,7 +12,7 @@
 
 #include "OpenAPIDefaultApiOperations.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Dom/JsonObject.h"
@@ -20,7 +20,7 @@
 #include "HttpModule.h"
 #include "PlatformHttp.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 FString OpenAPIDefaultApi::GetMessageRequest::ComputePath() const

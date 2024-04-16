@@ -12,12 +12,12 @@
 
 #include "OpenAPISupportedAssetResponseAssetsInner.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 void OpenAPISupportedAssetResponseAssetsInner::WriteJson(JsonWriter& Writer) const

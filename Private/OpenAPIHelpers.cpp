@@ -12,14 +12,14 @@
 
 #include "OpenAPIHelpers.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 
 #include "Interfaces/IHttpRequest.h"
 #include "PlatformHttp.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 HttpFileInput::HttpFileInput(const TCHAR* InFilePath)
@@ -83,7 +83,7 @@ void HttpMultipartFormData::SetupHttpRequest(const FHttpRequestRef& HttpRequest)
 {
 	if(HttpRequest->GetVerb() != TEXT("POST"))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Expected POST verb when using multipart form data"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Expected POST verb when using multipart form data"));
 	}
 
 	// Append final boundary
@@ -163,7 +163,7 @@ void HttpMultipartFormData::AddFilePart(const TCHAR* Name, const HttpFileInput& 
 	TArray<uint8> FileContents;
 	if (!FFileHelper::LoadFileToArray(FileContents, *File.GetFilePath()))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Failed to load file (%s)"), *File.GetFilePath());
+		UE_LOG(LogOpenAPI, Error, TEXT("Failed to load file (%s)"), *File.GetFilePath());
 		return;
 	}
 

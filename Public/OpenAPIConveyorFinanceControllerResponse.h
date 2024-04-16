@@ -19,7 +19,7 @@
 #include "OpenAPITransactionResponse.h"
 #include "OpenAPITransactionResponseTx.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -27,7 +27,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIConveyorFinanceControllerResponse : public Model
+class OPENAPI_API OpenAPIConveyorFinanceControllerResponse : public Model
 {
 public:
     virtual ~OpenAPIConveyorFinanceControllerResponse() {}

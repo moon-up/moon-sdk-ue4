@@ -24,13 +24,13 @@
 #include "OpenAPISupportedPaymentTypesCurrencyResponse.h"
 #include "OpenAPITransactionInput.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperCheckoutRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperCheckoutRequest : public Request
 {
 public:
     virtual ~OnRamperCheckoutRequest() {}
@@ -42,7 +42,7 @@ public:
 	OpenAPITransactionInput OpenAPITransactionInput;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperCheckoutResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperCheckoutResponse : public Response
 {
 public:
     virtual ~OnRamperCheckoutResponse() {}
@@ -55,7 +55,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetQuotesBuyRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetQuotesBuyRequest : public Request
 {
 public:
     virtual ~OnRamperGetQuotesBuyRequest() {}
@@ -72,7 +72,7 @@ public:
 	TOptional<FString> Country;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetQuotesBuyResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetQuotesBuyResponse : public Response
 {
 public:
     virtual ~OnRamperGetQuotesBuyResponse() {}
@@ -85,7 +85,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetQuotesSellRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetQuotesSellRequest : public Request
 {
 public:
     virtual ~OnRamperGetQuotesSellRequest() {}
@@ -102,7 +102,7 @@ public:
 	TOptional<FString> Country;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetQuotesSellResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetQuotesSellResponse : public Response
 {
 public:
     virtual ~OnRamperGetQuotesSellResponse() {}
@@ -115,7 +115,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedAssetsRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedAssetsRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedAssetsRequest() {}
@@ -127,7 +127,7 @@ public:
 	FString Country;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedAssetsResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedAssetsResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedAssetsResponse() {}
@@ -140,7 +140,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedCurrenciesRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedCurrenciesRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedCurrenciesRequest() {}
@@ -151,7 +151,7 @@ public:
 	FString Type;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedCurrenciesResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedCurrenciesResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedCurrenciesResponse() {}
@@ -164,7 +164,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedDefaultsAllRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedDefaultsAllRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedDefaultsAllRequest() {}
@@ -176,7 +176,7 @@ public:
 	FString Type;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedDefaultsAllResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedDefaultsAllResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedDefaultsAllResponse() {}
@@ -189,7 +189,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedOnRampsAllRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedOnRampsAllRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedOnRampsAllRequest() {}
@@ -199,7 +199,7 @@ public:
 	FString Authorization;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedOnRampsAllResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedOnRampsAllResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedOnRampsAllResponse() {}
@@ -212,7 +212,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedPaymentTypesRequest() {}
@@ -225,7 +225,7 @@ public:
 	FString Type;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedPaymentTypesResponse() {}
@@ -238,7 +238,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesFiatRequest : public Request
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesFiatRequest : public Request
 {
 public:
     virtual ~OnRamperGetSupportedPaymentTypesFiatRequest() {}
@@ -250,7 +250,7 @@ public:
 	FString Country;
 };
 
-class MOONSDK_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesFiatResponse : public Response
+class OPENAPI_API OpenAPIOnramperApi::OnRamperGetSupportedPaymentTypesFiatResponse : public Response
 {
 public:
     virtual ~OnRamperGetSupportedPaymentTypesFiatResponse() {}

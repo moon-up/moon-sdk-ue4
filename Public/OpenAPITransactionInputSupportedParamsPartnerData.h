@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPITransactionInputSupportedParamsPartnerDataRedirectUrl.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPITransactionInputSupportedParamsPartnerData : public Model
+class OPENAPI_API OpenAPITransactionInputSupportedParamsPartnerData : public Model
 {
 public:
     virtual ~OpenAPITransactionInputSupportedParamsPartnerData() {}

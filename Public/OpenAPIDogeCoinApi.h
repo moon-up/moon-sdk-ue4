@@ -15,10 +15,10 @@
 #include "CoreMinimal.h"
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
-class MOONSDK_API OpenAPIDogeCoinApi
+class OPENAPI_API OpenAPIDogeCoinApi
 {
 public:
 	OpenAPIDogeCoinApi();

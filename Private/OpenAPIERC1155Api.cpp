@@ -13,16 +13,16 @@
 #include "OpenAPIERC1155Api.h"
 
 #include "OpenAPIERC1155ApiOperations.h"
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 OpenAPIERC1155Api::OpenAPIERC1155Api()
-: Url(TEXT("https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"))
+: Url(TEXT("https://beta.usemoon.ai"))
 {
 }
 
@@ -47,7 +47,7 @@ bool OpenAPIERC1155Api::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPIERC1155Api: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPIERC1155Api: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,7 +125,7 @@ void OpenAPIERC1155Api::HandleResponse(FHttpResponsePtr HttpResponse, bool bSucc
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 

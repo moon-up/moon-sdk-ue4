@@ -1,6 +1,4 @@
-MoonSDK.Build.cs
-Private/MoonSDKModule.cpp
-Private/MoonSDKModule.h
+OpenAPI.Build.cs
 Private/OpenAPIAaveApi.cpp
 Private/OpenAPIAaveApiOperations.cpp
 Private/OpenAPIAaveInput.cpp
@@ -66,8 +64,6 @@ Private/OpenAPIEosTransactionOutput.cpp
 Private/OpenAPIErc1155Request.cpp
 Private/OpenAPIErc20Api.cpp
 Private/OpenAPIErc20ApiOperations.cpp
-Private/OpenAPIErc4337Api.cpp
-Private/OpenAPIErc4337ApiOperations.cpp
 Private/OpenAPIErc721Api.cpp
 Private/OpenAPIErc721ApiOperations.cpp
 Private/OpenAPIErc721Request.cpp
@@ -86,6 +82,8 @@ Private/OpenAPILitecoinInput.cpp
 Private/OpenAPILitecoinTransactionInput.cpp
 Private/OpenAPILitecoinTransactionOutput.cpp
 Private/OpenAPIMessage.cpp
+Private/OpenAPIModule.cpp
+Private/OpenAPIModule.h
 Private/OpenAPINonceAPIResponse.cpp
 Private/OpenAPINonceResponse.cpp
 Private/OpenAPIOneinchApi.cpp
@@ -211,8 +209,6 @@ Public/OpenAPIEosTransactionOutput.h
 Public/OpenAPIErc1155Request.h
 Public/OpenAPIErc20Api.h
 Public/OpenAPIErc20ApiOperations.h
-Public/OpenAPIErc4337Api.h
-Public/OpenAPIErc4337ApiOperations.h
 Public/OpenAPIErc721Api.h
 Public/OpenAPIErc721ApiOperations.h
 Public/OpenAPIErc721Request.h

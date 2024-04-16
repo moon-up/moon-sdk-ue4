@@ -13,9 +13,10 @@
 #pragma once
 
 #include "OpenAPIBaseModel.h"
+#include "OpenAPIInputBody.h"
 #include "OpenAPITransactionData.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPISignMessageAPIResponse : public Model
+class OPENAPI_API OpenAPISignMessageAPIResponse : public Model
 {
 public:
     virtual ~OpenAPISignMessageAPIResponse() {}
@@ -32,6 +33,8 @@ public:
 
 	bool Success = false;
 	FString Message;
+	TOptional<OpenAPIInputBody> Body;
+	TOptional<FString> Address;
 	TOptional<OpenAPITransactionData> Data;
 };
 

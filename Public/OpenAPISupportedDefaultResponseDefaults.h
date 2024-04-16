@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPISupportedDefaultResponseDefaultsId.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPISupportedDefaultResponseDefaults : public Model
+class OPENAPI_API OpenAPISupportedDefaultResponseDefaults : public Model
 {
 public:
     virtual ~OpenAPISupportedDefaultResponseDefaults() {}

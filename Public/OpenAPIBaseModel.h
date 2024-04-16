@@ -20,13 +20,13 @@
 #include "Containers/Ticker.h"
 #include "Runtime/Launch/Resources/Version.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 typedef TSharedRef<TJsonWriter<>> JsonWriter;
 using namespace FHttpRetrySystem;
 
-struct MOONSDK_API HttpRetryManager
+struct OPENAPI_API HttpRetryManager
 	: public FManager
 #if ENGINE_MAJOR_VERSION <= 4
 	, public FTickerObjectBase
@@ -39,7 +39,7 @@ struct MOONSDK_API HttpRetryManager
 	bool Tick(float DeltaTime) final;
 };
 
-struct MOONSDK_API HttpRetryParams
+struct OPENAPI_API HttpRetryParams
 {
 	HttpRetryParams(
 		const FRetryLimitCountSetting& InRetryLimitCountOverride = FRetryLimitCountSetting(),
@@ -56,7 +56,7 @@ struct MOONSDK_API HttpRetryParams
 	FRetryDomainsPtr					 RetryDomains;
 };
 
-class MOONSDK_API Model
+class OPENAPI_API Model
 {
 public:
 	virtual ~Model() {}
@@ -64,7 +64,7 @@ public:
 	virtual bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) = 0;
 };
 
-class MOONSDK_API Request
+class OPENAPI_API Request
 {
 public:
 	virtual ~Request() {}
@@ -79,7 +79,7 @@ private:
 	TOptional<HttpRetryParams> RetryParams;
 };
 
-class MOONSDK_API Response
+class OPENAPI_API Response
 {
 public:
 	virtual ~Response() {}

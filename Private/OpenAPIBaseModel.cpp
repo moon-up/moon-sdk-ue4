@@ -12,7 +12,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 bool HttpRetryManager::Tick(float DeltaTime)

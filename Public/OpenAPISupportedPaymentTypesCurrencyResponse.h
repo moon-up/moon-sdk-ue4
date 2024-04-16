@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPISupportedPaymentTypesMessage.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPISupportedPaymentTypesCurrencyResponse : public Model
+class OPENAPI_API OpenAPISupportedPaymentTypesCurrencyResponse : public Model
 {
 public:
     virtual ~OpenAPISupportedPaymentTypesCurrencyResponse() {}

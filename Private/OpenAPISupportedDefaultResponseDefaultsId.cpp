@@ -12,12 +12,12 @@
 
 #include "OpenAPISupportedDefaultResponseDefaultsId.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 void OpenAPISupportedDefaultResponseDefaultsId::WriteJson(JsonWriter& Writer) const

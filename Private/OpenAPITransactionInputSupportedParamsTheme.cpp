@@ -12,12 +12,12 @@
 
 #include "OpenAPITransactionInputSupportedParamsTheme.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 void OpenAPITransactionInputSupportedParamsTheme::WriteJson(JsonWriter& Writer) const

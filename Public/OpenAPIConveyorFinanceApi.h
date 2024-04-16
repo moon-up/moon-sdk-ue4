@@ -15,10 +15,10 @@
 #include "CoreMinimal.h"
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
-class MOONSDK_API OpenAPIConveyorFinanceApi
+class OPENAPI_API OpenAPIConveyorFinanceApi
 {
 public:
 	OpenAPIConveyorFinanceApi();

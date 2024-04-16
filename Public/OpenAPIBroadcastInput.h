@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -22,7 +22,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIBroadcastInput : public Model
+class OPENAPI_API OpenAPIBroadcastInput : public Model
 {
 public:
     virtual ~OpenAPIBroadcastInput() {}

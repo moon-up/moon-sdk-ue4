@@ -18,13 +18,13 @@
 #include "OpenAPIInputBody.h"
 #include "OpenAPITransactionAPIResponse.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::AllowanceErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::AllowanceErc20Request : public Request
 {
 public:
     virtual ~AllowanceErc20Request() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::AllowanceErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::AllowanceErc20Response : public Response
 {
 public:
     virtual ~AllowanceErc20Response() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::ApproveErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::ApproveErc20Request : public Request
 {
 public:
     virtual ~ApproveErc20Request() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::ApproveErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::ApproveErc20Response : public Response
 {
 public:
     virtual ~ApproveErc20Response() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::BalanceOfErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::BalanceOfErc20Request : public Request
 {
 public:
     virtual ~BalanceOfErc20Request() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::BalanceOfErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::BalanceOfErc20Response : public Response
 {
 public:
     virtual ~BalanceOfErc20Response() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::DecimalsErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::DecimalsErc20Request : public Request
 {
 public:
     virtual ~DecimalsErc20Request() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::DecimalsErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::DecimalsErc20Response : public Response
 {
 public:
     virtual ~DecimalsErc20Response() {}
@@ -124,7 +124,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::NameErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::NameErc20Request : public Request
 {
 public:
     virtual ~NameErc20Request() {}
@@ -136,7 +136,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::NameErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::NameErc20Response : public Response
 {
 public:
     virtual ~NameErc20Response() {}
@@ -149,7 +149,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::SymbolErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::SymbolErc20Request : public Request
 {
 public:
     virtual ~SymbolErc20Request() {}
@@ -161,7 +161,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::SymbolErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::SymbolErc20Response : public Response
 {
 public:
     virtual ~SymbolErc20Response() {}
@@ -174,7 +174,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::TotalSupplyErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::TotalSupplyErc20Request : public Request
 {
 public:
     virtual ~TotalSupplyErc20Request() {}
@@ -186,7 +186,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::TotalSupplyErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::TotalSupplyErc20Response : public Response
 {
 public:
     virtual ~TotalSupplyErc20Response() {}
@@ -199,7 +199,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::TransferErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::TransferErc20Request : public Request
 {
 public:
     virtual ~TransferErc20Request() {}
@@ -211,7 +211,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::TransferErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::TransferErc20Response : public Response
 {
 public:
     virtual ~TransferErc20Response() {}
@@ -224,7 +224,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc20Api::TransferFromErc20Request : public Request
+class OPENAPI_API OpenAPIErc20Api::TransferFromErc20Request : public Request
 {
 public:
     virtual ~TransferFromErc20Request() {}
@@ -236,7 +236,7 @@ public:
 	OpenAPIInputBody OpenAPIInputBody;
 };
 
-class MOONSDK_API OpenAPIErc20Api::TransferFromErc20Response : public Response
+class OPENAPI_API OpenAPIErc20Api::TransferFromErc20Response : public Response
 {
 public:
     virtual ~TransferFromErc20Response() {}

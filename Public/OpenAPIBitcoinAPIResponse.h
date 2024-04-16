@@ -14,8 +14,9 @@
 
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIBitcoinTransactionOutput.h"
+#include "OpenAPIInputBody.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIBitcoinAPIResponse : public Model
+class OPENAPI_API OpenAPIBitcoinAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIBitcoinAPIResponse() {}
@@ -32,6 +33,8 @@ public:
 
 	bool Success = false;
 	FString Message;
+	TOptional<OpenAPIInputBody> Body;
+	TOptional<FString> Address;
 	TOptional<OpenAPIBitcoinTransactionOutput> Data;
 };
 

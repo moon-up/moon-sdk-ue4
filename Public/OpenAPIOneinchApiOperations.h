@@ -17,13 +17,13 @@
 
 #include "OpenAPIGetSwapDto.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::ApproveCallDataRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::ApproveCallDataRequest : public Request
 {
 public:
     virtual ~ApproveCallDataRequest() {}
@@ -33,7 +33,7 @@ public:
 	TSharedPtr<FJsonValue> Body;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::ApproveCallDataResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::ApproveCallDataResponse : public Response
 {
 public:
     virtual ~ApproveCallDataResponse() {}
@@ -46,7 +46,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::ApproveSpenderRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::ApproveSpenderRequest : public Request
 {
 public:
     virtual ~ApproveSpenderRequest() {}
@@ -56,7 +56,7 @@ public:
 	TSharedPtr<FJsonValue> Body;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::ApproveSpenderResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::ApproveSpenderResponse : public Response
 {
 public:
     virtual ~ApproveSpenderResponse() {}
@@ -69,7 +69,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::ProtocolsRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::ProtocolsRequest : public Request
 {
 public:
     virtual ~ProtocolsRequest() {}
@@ -79,7 +79,7 @@ public:
 	TSharedPtr<FJsonValue> Body;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::ProtocolsResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::ProtocolsResponse : public Response
 {
 public:
     virtual ~ProtocolsResponse() {}
@@ -92,7 +92,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::QuoteRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::QuoteRequest : public Request
 {
 public:
     virtual ~QuoteRequest() {}
@@ -102,7 +102,7 @@ public:
 	TSharedPtr<FJsonValue> Body;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::QuoteResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::QuoteResponse : public Response
 {
 public:
     virtual ~QuoteResponse() {}
@@ -115,7 +115,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::SwapRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::SwapRequest : public Request
 {
 public:
     virtual ~SwapRequest() {}
@@ -127,7 +127,7 @@ public:
 	OpenAPIGetSwapDto OpenAPIGetSwapDto;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::SwapResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::SwapResponse : public Response
 {
 public:
     virtual ~SwapResponse() {}
@@ -140,7 +140,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIOneinchApi::TokensRequest : public Request
+class OPENAPI_API OpenAPIOneinchApi::TokensRequest : public Request
 {
 public:
     virtual ~TokensRequest() {}
@@ -150,7 +150,7 @@ public:
 	TSharedPtr<FJsonValue> Body;
 };
 
-class MOONSDK_API OpenAPIOneinchApi::TokensResponse : public Response
+class OPENAPI_API OpenAPIOneinchApi::TokensResponse : public Response
 {
 public:
     virtual ~TokensResponse() {}

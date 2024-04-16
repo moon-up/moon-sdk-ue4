@@ -18,13 +18,13 @@
 #include "OpenAPIErc721Request.h"
 #include "OpenAPITransactionAPIResponse.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::ApproveRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::ApproveRequest : public Request
 {
 public:
     virtual ~ApproveRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::ApproveResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::ApproveResponse : public Response
 {
 public:
     virtual ~ApproveResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::BalanceOfRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::BalanceOfRequest : public Request
 {
 public:
     virtual ~BalanceOfRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::BalanceOfResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::BalanceOfResponse : public Response
 {
 public:
     virtual ~BalanceOfResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::GetApprovedRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::GetApprovedRequest : public Request
 {
 public:
     virtual ~GetApprovedRequest() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::GetApprovedResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::GetApprovedResponse : public Response
 {
 public:
     virtual ~GetApprovedResponse() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::IsApprovedForAllRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::IsApprovedForAllRequest : public Request
 {
 public:
     virtual ~IsApprovedForAllRequest() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::IsApprovedForAllResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::IsApprovedForAllResponse : public Response
 {
 public:
     virtual ~IsApprovedForAllResponse() {}
@@ -124,7 +124,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::NameRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::NameRequest : public Request
 {
 public:
     virtual ~NameRequest() {}
@@ -136,7 +136,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::NameResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::NameResponse : public Response
 {
 public:
     virtual ~NameResponse() {}
@@ -149,7 +149,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::OwnerOfRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::OwnerOfRequest : public Request
 {
 public:
     virtual ~OwnerOfRequest() {}
@@ -161,7 +161,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::OwnerOfResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::OwnerOfResponse : public Response
 {
 public:
     virtual ~OwnerOfResponse() {}
@@ -174,7 +174,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::SafeTransferFromRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::SafeTransferFromRequest : public Request
 {
 public:
     virtual ~SafeTransferFromRequest() {}
@@ -186,7 +186,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::SafeTransferFromResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::SafeTransferFromResponse : public Response
 {
 public:
     virtual ~SafeTransferFromResponse() {}
@@ -199,7 +199,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::SetApprovalForAllRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::SetApprovalForAllRequest : public Request
 {
 public:
     virtual ~SetApprovalForAllRequest() {}
@@ -211,7 +211,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::SetApprovalForAllResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::SetApprovalForAllResponse : public Response
 {
 public:
     virtual ~SetApprovalForAllResponse() {}
@@ -224,7 +224,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::SymbolRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::SymbolRequest : public Request
 {
 public:
     virtual ~SymbolRequest() {}
@@ -236,7 +236,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::SymbolResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::SymbolResponse : public Response
 {
 public:
     virtual ~SymbolResponse() {}
@@ -249,7 +249,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::TokenUriRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::TokenUriRequest : public Request
 {
 public:
     virtual ~TokenUriRequest() {}
@@ -261,7 +261,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::TokenUriResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::TokenUriResponse : public Response
 {
 public:
     virtual ~TokenUriResponse() {}
@@ -274,7 +274,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::TransferRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::TransferRequest : public Request
 {
 public:
     virtual ~TransferRequest() {}
@@ -286,7 +286,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::TransferResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::TransferResponse : public Response
 {
 public:
     virtual ~TransferResponse() {}
@@ -299,7 +299,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIErc721Api::TransferFromRequest : public Request
+class OPENAPI_API OpenAPIErc721Api::TransferFromRequest : public Request
 {
 public:
     virtual ~TransferFromRequest() {}
@@ -311,7 +311,7 @@ public:
 	OpenAPIErc721Request OpenAPIErc721Request;
 };
 
-class MOONSDK_API OpenAPIErc721Api::TransferFromResponse : public Response
+class OPENAPI_API OpenAPIErc721Api::TransferFromResponse : public Response
 {
 public:
     virtual ~TransferFromResponse() {}

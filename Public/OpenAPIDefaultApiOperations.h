@@ -17,13 +17,13 @@
 
 #include "OpenAPIPingResponse.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIDefaultApi::GetMessageRequest : public Request
+class OPENAPI_API OpenAPIDefaultApi::GetMessageRequest : public Request
 {
 public:
     virtual ~GetMessageRequest() {}
@@ -32,7 +32,7 @@ public:
 
 };
 
-class MOONSDK_API OpenAPIDefaultApi::GetMessageResponse : public Response
+class OPENAPI_API OpenAPIDefaultApi::GetMessageResponse : public Response
 {
 public:
     virtual ~GetMessageResponse() {}

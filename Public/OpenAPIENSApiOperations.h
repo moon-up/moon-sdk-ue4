@@ -18,13 +18,13 @@
 #include "OpenAPIEnsResolveAPIResponse.h"
 #include "OpenAPIEnsResolveInput.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIENSApi::ResolveRequest : public Request
+class OPENAPI_API OpenAPIENSApi::ResolveRequest : public Request
 {
 public:
     virtual ~ResolveRequest() {}
@@ -35,7 +35,7 @@ public:
 	OpenAPIEnsResolveInput OpenAPIEnsResolveInput;
 };
 
-class MOONSDK_API OpenAPIENSApi::ResolveResponse : public Response
+class OPENAPI_API OpenAPIENSApi::ResolveResponse : public Response
 {
 public:
     virtual ~ResolveResponse() {}

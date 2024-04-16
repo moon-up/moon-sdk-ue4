@@ -12,7 +12,7 @@
 
 #include "OpenAPIERC1155ApiOperations.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Dom/JsonObject.h"
@@ -20,7 +20,7 @@
 #include "HttpModule.h"
 #include "PlatformHttp.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 FString OpenAPIERC1155Api::BalanceOfRequest::ComputePath() const
@@ -58,15 +58,15 @@ void OpenAPIERC1155Api::BalanceOfRequest::SetupHttpRequest(const FHttpRequestRef
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -121,15 +121,15 @@ void OpenAPIERC1155Api::BalanceOfBatchRequest::SetupHttpRequest(const FHttpReque
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -184,15 +184,15 @@ void OpenAPIERC1155Api::IsApprovedForAllRequest::SetupHttpRequest(const FHttpReq
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -247,15 +247,15 @@ void OpenAPIERC1155Api::SafeBatchTransferFromRequest::SetupHttpRequest(const FHt
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -310,15 +310,15 @@ void OpenAPIERC1155Api::SafeTransferFromRequest::SetupHttpRequest(const FHttpReq
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -373,15 +373,15 @@ void OpenAPIERC1155Api::SetApprovalForAllRequest::SetupHttpRequest(const FHttpRe
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIErc1155Request) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 

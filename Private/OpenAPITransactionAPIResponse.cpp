@@ -12,12 +12,12 @@
 
 #include "OpenAPITransactionAPIResponse.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 void OpenAPITransactionAPIResponse::WriteJson(JsonWriter& Writer) const
@@ -25,6 +25,22 @@ void OpenAPITransactionAPIResponse::WriteJson(JsonWriter& Writer) const
 	Writer->WriteObjectStart();
 	Writer->WriteIdentifierPrefix(TEXT("success")); WriteJsonValue(Writer, Success);
 	Writer->WriteIdentifierPrefix(TEXT("message")); WriteJsonValue(Writer, Message);
+	if (Body.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("body")); WriteJsonValue(Writer, Body.GetValue());
+	}
+	if (Address.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("address")); WriteJsonValue(Writer, Address.GetValue());
+	}
+	if (TransactionHash.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("transaction_hash")); WriteJsonValue(Writer, TransactionHash.GetValue());
+	}
+	if (SignedTx.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("signedTx")); WriteJsonValue(Writer, SignedTx.GetValue());
+	}
 	if (Data.IsSet())
 	{
 		Writer->WriteIdentifierPrefix(TEXT("data")); WriteJsonValue(Writer, Data.GetValue());
@@ -42,6 +58,10 @@ bool OpenAPITransactionAPIResponse::FromJson(const TSharedPtr<FJsonValue>& JsonV
 
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("success"), Success);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("message"), Message);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("body"), Body);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("address"), Address);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("transaction_hash"), TransactionHash);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("signedTx"), SignedTx);
 	ParseSuccess &= TryGetJsonValue(*Object, TEXT("data"), Data);
 
 	return ParseSuccess;

@@ -16,7 +16,7 @@
 #include "OpenAPITransactionRequest.h"
 #include "OpenAPITx.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -24,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPITransactionData : public Model
+class OPENAPI_API OpenAPITransactionData : public Model
 {
 public:
     virtual ~OpenAPITransactionData() {}

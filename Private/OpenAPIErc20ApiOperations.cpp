@@ -12,7 +12,7 @@
 
 #include "OpenAPIErc20ApiOperations.h"
 
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Dom/JsonObject.h"
@@ -20,7 +20,7 @@
 #include "HttpModule.h"
 #include "PlatformHttp.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 FString OpenAPIErc20Api::AllowanceErc20Request::ComputePath() const
@@ -58,15 +58,15 @@ void OpenAPIErc20Api::AllowanceErc20Request::SetupHttpRequest(const FHttpRequest
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -121,15 +121,15 @@ void OpenAPIErc20Api::ApproveErc20Request::SetupHttpRequest(const FHttpRequestRe
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -184,15 +184,15 @@ void OpenAPIErc20Api::BalanceOfErc20Request::SetupHttpRequest(const FHttpRequest
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -247,15 +247,15 @@ void OpenAPIErc20Api::DecimalsErc20Request::SetupHttpRequest(const FHttpRequestR
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -310,15 +310,15 @@ void OpenAPIErc20Api::NameErc20Request::SetupHttpRequest(const FHttpRequestRef& 
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -373,15 +373,15 @@ void OpenAPIErc20Api::SymbolErc20Request::SetupHttpRequest(const FHttpRequestRef
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -436,15 +436,15 @@ void OpenAPIErc20Api::TotalSupplyErc20Request::SetupHttpRequest(const FHttpReque
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -499,15 +499,15 @@ void OpenAPIErc20Api::TransferErc20Request::SetupHttpRequest(const FHttpRequestR
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -562,15 +562,15 @@ void OpenAPIErc20Api::TransferFromErc20Request::SetupHttpRequest(const FHttpRequ
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIInputBody) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 

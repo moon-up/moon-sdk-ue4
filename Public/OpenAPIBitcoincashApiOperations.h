@@ -20,13 +20,13 @@
 #include "OpenAPIBitcoinCashInput.h"
 #include "OpenAPIBitcoinCashTransactionInput.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIBitcoincashApi::CreateBitcoinCashAccountRequest : public Request
+class OPENAPI_API OpenAPIBitcoincashApi::CreateBitcoinCashAccountRequest : public Request
 {
 public:
     virtual ~CreateBitcoinCashAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPIBitcoinCashInput OpenAPIBitcoinCashInput;
 };
 
-class MOONSDK_API OpenAPIBitcoincashApi::CreateBitcoinCashAccountResponse : public Response
+class OPENAPI_API OpenAPIBitcoincashApi::CreateBitcoinCashAccountResponse : public Response
 {
 public:
     virtual ~CreateBitcoinCashAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIBitcoincashApi::GetBitcoinCashAccountRequest : public Request
+class OPENAPI_API OpenAPIBitcoincashApi::GetBitcoinCashAccountRequest : public Request
 {
 public:
     virtual ~GetBitcoinCashAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class MOONSDK_API OpenAPIBitcoincashApi::GetBitcoinCashAccountResponse : public Response
+class OPENAPI_API OpenAPIBitcoincashApi::GetBitcoinCashAccountResponse : public Response
 {
 public:
     virtual ~GetBitcoinCashAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIBitcoincashApi::ListBitcoinCashAccountsRequest : public Request
+class OPENAPI_API OpenAPIBitcoincashApi::ListBitcoinCashAccountsRequest : public Request
 {
 public:
     virtual ~ListBitcoinCashAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class MOONSDK_API OpenAPIBitcoincashApi::ListBitcoinCashAccountsResponse : public Response
+class OPENAPI_API OpenAPIBitcoincashApi::ListBitcoinCashAccountsResponse : public Response
 {
 public:
     virtual ~ListBitcoinCashAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIBitcoincashApi::SignBitcoinCashTransactionRequest : public Request
+class OPENAPI_API OpenAPIBitcoincashApi::SignBitcoinCashTransactionRequest : public Request
 {
 public:
     virtual ~SignBitcoinCashTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPIBitcoinCashTransactionInput OpenAPIBitcoinCashTransactionInput;
 };
 
-class MOONSDK_API OpenAPIBitcoincashApi::SignBitcoinCashTransactionResponse : public Response
+class OPENAPI_API OpenAPIBitcoincashApi::SignBitcoinCashTransactionResponse : public Response
 {
 public:
     virtual ~SignBitcoinCashTransactionResponse() {}

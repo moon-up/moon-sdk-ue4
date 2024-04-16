@@ -16,7 +16,7 @@
 #include "OpenAPITransactionInputSupportedParamsPartnerData.h"
 #include "OpenAPITransactionInputSupportedParamsTheme.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -24,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPITransactionInputSupportedParams : public Model
+class OPENAPI_API OpenAPITransactionInputSupportedParams : public Model
 {
 public:
     virtual ~OpenAPITransactionInputSupportedParams() {}

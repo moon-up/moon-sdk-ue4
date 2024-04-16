@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -22,7 +22,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPINonceResponse : public Model
+class OPENAPI_API OpenAPINonceResponse : public Model
 {
 public:
     virtual ~OpenAPINonceResponse() {}

@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIGetSupportedOnRampsResponseMessageInner.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIGetSupportedOnRampsResponse : public Model
+class OPENAPI_API OpenAPIGetSupportedOnRampsResponse : public Model
 {
 public:
     virtual ~OpenAPIGetSupportedOnRampsResponse() {}

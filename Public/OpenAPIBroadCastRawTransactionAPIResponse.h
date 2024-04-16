@@ -14,8 +14,9 @@
 
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIBroadCastRawTransactionResponse.h"
+#include "OpenAPIInputBody.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIBroadCastRawTransactionAPIResponse : public Model
+class OPENAPI_API OpenAPIBroadCastRawTransactionAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIBroadCastRawTransactionAPIResponse() {}
@@ -32,6 +33,8 @@ public:
 
 	bool Success = false;
 	FString Message;
+	TOptional<OpenAPIInputBody> Body;
+	TOptional<FString> Address;
 	TOptional<OpenAPIBroadCastRawTransactionResponse> Data;
 };
 

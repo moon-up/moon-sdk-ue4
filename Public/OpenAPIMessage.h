@@ -16,7 +16,7 @@
 #include "OpenAPICryptoCurrency.h"
 #include "OpenAPIFiatCurrency.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -24,7 +24,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPIMessage : public Model
+class OPENAPI_API OpenAPIMessage : public Model
 {
 public:
     virtual ~OpenAPIMessage() {}

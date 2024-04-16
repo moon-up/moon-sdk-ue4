@@ -20,13 +20,13 @@
 #include "OpenAPIEosInput.h"
 #include "OpenAPIEosTransactionInput.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /* 
 
 */
-class MOONSDK_API OpenAPIEosApi::CreateEosAccountRequest : public Request
+class OPENAPI_API OpenAPIEosApi::CreateEosAccountRequest : public Request
 {
 public:
     virtual ~CreateEosAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPIEosInput OpenAPIEosInput;
 };
 
-class MOONSDK_API OpenAPIEosApi::CreateEosAccountResponse : public Response
+class OPENAPI_API OpenAPIEosApi::CreateEosAccountResponse : public Response
 {
 public:
     virtual ~CreateEosAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIEosApi::GetEosAccountRequest : public Request
+class OPENAPI_API OpenAPIEosApi::GetEosAccountRequest : public Request
 {
 public:
     virtual ~GetEosAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class MOONSDK_API OpenAPIEosApi::GetEosAccountResponse : public Response
+class OPENAPI_API OpenAPIEosApi::GetEosAccountResponse : public Response
 {
 public:
     virtual ~GetEosAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIEosApi::ListEosAccountsRequest : public Request
+class OPENAPI_API OpenAPIEosApi::ListEosAccountsRequest : public Request
 {
 public:
     virtual ~ListEosAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class MOONSDK_API OpenAPIEosApi::ListEosAccountsResponse : public Response
+class OPENAPI_API OpenAPIEosApi::ListEosAccountsResponse : public Response
 {
 public:
     virtual ~ListEosAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class MOONSDK_API OpenAPIEosApi::SignEosTransactionRequest : public Request
+class OPENAPI_API OpenAPIEosApi::SignEosTransactionRequest : public Request
 {
 public:
     virtual ~SignEosTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPIEosTransactionInput OpenAPIEosTransactionInput;
 };
 
-class MOONSDK_API OpenAPIEosApi::SignEosTransactionResponse : public Response
+class OPENAPI_API OpenAPIEosApi::SignEosTransactionResponse : public Response
 {
 public:
     virtual ~SignEosTransactionResponse() {}

@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIMessage.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 /*
@@ -23,7 +23,7 @@ namespace MoonSDK
  *
  * 
  */
-class MOONSDK_API OpenAPISupportedCurrenciesResponse : public Model
+class OPENAPI_API OpenAPISupportedCurrenciesResponse : public Model
 {
 public:
     virtual ~OpenAPISupportedCurrenciesResponse() {}

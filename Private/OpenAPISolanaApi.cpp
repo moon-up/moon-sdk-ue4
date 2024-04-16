@@ -13,16 +13,16 @@
 #include "OpenAPISolanaApi.h"
 
 #include "OpenAPISolanaApiOperations.h"
-#include "MoonSDKModule.h"
+#include "OpenAPIModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
 OpenAPISolanaApi::OpenAPISolanaApi()
-: Url(TEXT("https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app"))
+: Url(TEXT("https://beta.usemoon.ai"))
 {
 }
 
@@ -47,7 +47,7 @@ bool OpenAPISolanaApi::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPISolanaApi: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPISolanaApi: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,7 +125,7 @@ void OpenAPISolanaApi::HandleResponse(FHttpResponsePtr HttpResponse, bool bSucce
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 

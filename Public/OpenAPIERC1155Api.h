@@ -15,10 +15,10 @@
 #include "CoreMinimal.h"
 #include "OpenAPIBaseModel.h"
 
-namespace MoonSDK
+namespace OpenAPI
 {
 
-class MOONSDK_API OpenAPIERC1155Api
+class OPENAPI_API OpenAPIERC1155Api
 {
 public:
 	OpenAPIERC1155Api();
