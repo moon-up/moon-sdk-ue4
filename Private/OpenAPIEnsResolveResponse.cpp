@@ -12,12 +12,12 @@
 
 #include "OpenAPIEnsResolveResponse.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIEnsResolveResponse::WriteJson(JsonWriter& Writer) const

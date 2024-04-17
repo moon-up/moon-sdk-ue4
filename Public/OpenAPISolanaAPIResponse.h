@@ -16,7 +16,7 @@
 #include "OpenAPIInputBody.h"
 #include "OpenAPISolanaTransactionOutput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPISolanaAPIResponse : public Model
+class MOONSDK_API OpenAPISolanaAPIResponse : public Model
 {
 public:
     virtual ~OpenAPISolanaAPIResponse() {}

@@ -13,12 +13,12 @@
 #include "OpenAPIOnramperApi.h"
 
 #include "OpenAPIOnramperApiOperations.h"
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 
 #include "HttpModule.h"
 #include "Serialization/JsonSerializer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 OpenAPIOnramperApi::OpenAPIOnramperApi()
@@ -47,7 +47,7 @@ bool OpenAPIOnramperApi::IsValid() const
 {
 	if (Url.IsEmpty())
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("OpenAPIOnramperApi: Endpoint Url is not set, request cannot be performed"));
+		UE_LOG(LogMoonSDK, Error, TEXT("OpenAPIOnramperApi: Endpoint Url is not set, request cannot be performed"));
 		return false;
 	}
 
@@ -125,7 +125,7 @@ void OpenAPIOnramperApi::HandleResponse(FHttpResponsePtr HttpResponse, bool bSuc
 		}
 
 		// Report the parse error but do not mark the request as unsuccessful. Data could be partial or malformed, but the request succeeded.
-		UE_LOG(LogOpenAPI, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
+		UE_LOG(LogMoonSDK, Error, TEXT("Failed to deserialize Http response content (type:%s):\n%s"), *ContentType , *Content);
 		return;
 	}
 

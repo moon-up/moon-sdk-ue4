@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,7 +22,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPITronTransactionInput : public Model
+class MOONSDK_API OpenAPITronTransactionInput : public Model
 {
 public:
     virtual ~OpenAPITronTransactionInput() {}

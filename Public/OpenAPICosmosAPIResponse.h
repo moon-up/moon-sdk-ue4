@@ -16,7 +16,7 @@
 #include "OpenAPICosmosTransactionOutput.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPICosmosAPIResponse : public Model
+class MOONSDK_API OpenAPICosmosAPIResponse : public Model
 {
 public:
     virtual ~OpenAPICosmosAPIResponse() {}

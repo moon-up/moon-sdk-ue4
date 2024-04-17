@@ -14,7 +14,7 @@
 
 #include "OpenAPIBaseModel.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -22,7 +22,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIBroadCastRawTransactionResponse : public Model
+class MOONSDK_API OpenAPIBroadCastRawTransactionResponse : public Model
 {
 public:
     virtual ~OpenAPIBroadCastRawTransactionResponse() {}

@@ -20,13 +20,13 @@
 #include "OpenAPIBitcoinInput.h"
 #include "OpenAPIBitcoinTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIBitcoinApi::CreateBitcoinAccountRequest : public Request
+class MOONSDK_API OpenAPIBitcoinApi::CreateBitcoinAccountRequest : public Request
 {
 public:
     virtual ~CreateBitcoinAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPIBitcoinInput OpenAPIBitcoinInput;
 };
 
-class OPENAPI_API OpenAPIBitcoinApi::CreateBitcoinAccountResponse : public Response
+class MOONSDK_API OpenAPIBitcoinApi::CreateBitcoinAccountResponse : public Response
 {
 public:
     virtual ~CreateBitcoinAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIBitcoinApi::GetBitcoinAccountRequest : public Request
+class MOONSDK_API OpenAPIBitcoinApi::GetBitcoinAccountRequest : public Request
 {
 public:
     virtual ~GetBitcoinAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPIBitcoinApi::GetBitcoinAccountResponse : public Response
+class MOONSDK_API OpenAPIBitcoinApi::GetBitcoinAccountResponse : public Response
 {
 public:
     virtual ~GetBitcoinAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIBitcoinApi::ListBitcoinAccountsRequest : public Request
+class MOONSDK_API OpenAPIBitcoinApi::ListBitcoinAccountsRequest : public Request
 {
 public:
     virtual ~ListBitcoinAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIBitcoinApi::ListBitcoinAccountsResponse : public Response
+class MOONSDK_API OpenAPIBitcoinApi::ListBitcoinAccountsResponse : public Response
 {
 public:
     virtual ~ListBitcoinAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIBitcoinApi::SignBitcoinTransactionRequest : public Request
+class MOONSDK_API OpenAPIBitcoinApi::SignBitcoinTransactionRequest : public Request
 {
 public:
     virtual ~SignBitcoinTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPIBitcoinTransactionInput OpenAPIBitcoinTransactionInput;
 };
 
-class OPENAPI_API OpenAPIBitcoinApi::SignBitcoinTransactionResponse : public Response
+class MOONSDK_API OpenAPIBitcoinApi::SignBitcoinTransactionResponse : public Response
 {
 public:
     virtual ~SignBitcoinTransactionResponse() {}

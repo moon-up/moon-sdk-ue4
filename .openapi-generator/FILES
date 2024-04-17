@@ -1,4 +1,6 @@
-OpenAPI.Build.cs
+MoonSDK.Build.cs
+Private/MoonSDKModule.cpp
+Private/MoonSDKModule.h
 Private/OpenAPIAaveApi.cpp
 Private/OpenAPIAaveApiOperations.cpp
 Private/OpenAPIAaveInput.cpp
@@ -82,8 +84,6 @@ Private/OpenAPILitecoinInput.cpp
 Private/OpenAPILitecoinTransactionInput.cpp
 Private/OpenAPILitecoinTransactionOutput.cpp
 Private/OpenAPIMessage.cpp
-Private/OpenAPIModule.cpp
-Private/OpenAPIModule.h
 Private/OpenAPINonceAPIResponse.cpp
 Private/OpenAPINonceResponse.cpp
 Private/OpenAPIOneinchApi.cpp

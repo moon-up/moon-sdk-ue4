@@ -16,7 +16,7 @@
 #include "OpenAPIBalanceResponse.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIBalanceAPIResponse : public Model
+class MOONSDK_API OpenAPIBalanceAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIBalanceAPIResponse() {}

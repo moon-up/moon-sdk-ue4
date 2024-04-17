@@ -20,13 +20,13 @@
 #include "OpenAPIRippleInput.h"
 #include "OpenAPIRippleTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIRippleApi::CreateRippleAccountRequest : public Request
+class MOONSDK_API OpenAPIRippleApi::CreateRippleAccountRequest : public Request
 {
 public:
     virtual ~CreateRippleAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPIRippleInput OpenAPIRippleInput;
 };
 
-class OPENAPI_API OpenAPIRippleApi::CreateRippleAccountResponse : public Response
+class MOONSDK_API OpenAPIRippleApi::CreateRippleAccountResponse : public Response
 {
 public:
     virtual ~CreateRippleAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIRippleApi::GetRippleAccountRequest : public Request
+class MOONSDK_API OpenAPIRippleApi::GetRippleAccountRequest : public Request
 {
 public:
     virtual ~GetRippleAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPIRippleApi::GetRippleAccountResponse : public Response
+class MOONSDK_API OpenAPIRippleApi::GetRippleAccountResponse : public Response
 {
 public:
     virtual ~GetRippleAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIRippleApi::ListRippleAccountsRequest : public Request
+class MOONSDK_API OpenAPIRippleApi::ListRippleAccountsRequest : public Request
 {
 public:
     virtual ~ListRippleAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPIRippleApi::ListRippleAccountsResponse : public Response
+class MOONSDK_API OpenAPIRippleApi::ListRippleAccountsResponse : public Response
 {
 public:
     virtual ~ListRippleAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIRippleApi::SignRippleTransactionRequest : public Request
+class MOONSDK_API OpenAPIRippleApi::SignRippleTransactionRequest : public Request
 {
 public:
     virtual ~SignRippleTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPIRippleTransactionInput OpenAPIRippleTransactionInput;
 };
 
-class OPENAPI_API OpenAPIRippleApi::SignRippleTransactionResponse : public Response
+class MOONSDK_API OpenAPIRippleApi::SignRippleTransactionResponse : public Response
 {
 public:
     virtual ~SignRippleTransactionResponse() {}

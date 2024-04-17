@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPISupportedAssetResponseAssetsInner.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -23,7 +23,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPISupportedAssetResponse : public Model
+class MOONSDK_API OpenAPISupportedAssetResponse : public Model
 {
 public:
     virtual ~OpenAPISupportedAssetResponse() {}

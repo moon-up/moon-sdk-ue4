@@ -16,7 +16,7 @@
 #include "OpenAPIBitcoinCashTransactionOutput.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIBitcoinCashAPIResponse : public Model
+class MOONSDK_API OpenAPIBitcoinCashAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIBitcoinCashAPIResponse() {}

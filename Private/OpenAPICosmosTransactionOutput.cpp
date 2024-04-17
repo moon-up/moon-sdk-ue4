@@ -12,12 +12,12 @@
 
 #include "OpenAPICosmosTransactionOutput.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPICosmosTransactionOutput::WriteJson(JsonWriter& Writer) const

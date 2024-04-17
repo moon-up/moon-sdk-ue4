@@ -18,13 +18,13 @@
 #include "OpenAPIErc1155Request.h"
 #include "OpenAPITransactionAPIResponse.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::BalanceOfRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::BalanceOfRequest : public Request
 {
 public:
     virtual ~BalanceOfRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::BalanceOfResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::BalanceOfResponse : public Response
 {
 public:
     virtual ~BalanceOfResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::BalanceOfBatchRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::BalanceOfBatchRequest : public Request
 {
 public:
     virtual ~BalanceOfBatchRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::BalanceOfBatchResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::BalanceOfBatchResponse : public Response
 {
 public:
     virtual ~BalanceOfBatchResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::IsApprovedForAllRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::IsApprovedForAllRequest : public Request
 {
 public:
     virtual ~IsApprovedForAllRequest() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::IsApprovedForAllResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::IsApprovedForAllResponse : public Response
 {
 public:
     virtual ~IsApprovedForAllResponse() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::SafeBatchTransferFromRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::SafeBatchTransferFromRequest : public Request
 {
 public:
     virtual ~SafeBatchTransferFromRequest() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::SafeBatchTransferFromResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::SafeBatchTransferFromResponse : public Response
 {
 public:
     virtual ~SafeBatchTransferFromResponse() {}
@@ -124,7 +124,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::SafeTransferFromRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::SafeTransferFromRequest : public Request
 {
 public:
     virtual ~SafeTransferFromRequest() {}
@@ -136,7 +136,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::SafeTransferFromResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::SafeTransferFromResponse : public Response
 {
 public:
     virtual ~SafeTransferFromResponse() {}
@@ -149,7 +149,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIERC1155Api::SetApprovalForAllRequest : public Request
+class MOONSDK_API OpenAPIERC1155Api::SetApprovalForAllRequest : public Request
 {
 public:
     virtual ~SetApprovalForAllRequest() {}
@@ -161,7 +161,7 @@ public:
 	OpenAPIErc1155Request OpenAPIErc1155Request;
 };
 
-class OPENAPI_API OpenAPIERC1155Api::SetApprovalForAllResponse : public Response
+class MOONSDK_API OpenAPIERC1155Api::SetApprovalForAllResponse : public Response
 {
 public:
     virtual ~SetApprovalForAllResponse() {}

@@ -12,12 +12,12 @@
 
 #include "OpenAPIFiatCurrency.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPIFiatCurrency::WriteJson(JsonWriter& Writer) const

@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIGetSupportedOnRampsResponseMessageInnerIconsPng.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -23,7 +23,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIGetSupportedOnRampsResponseMessageInnerIcons : public Model
+class MOONSDK_API OpenAPIGetSupportedOnRampsResponseMessageInnerIcons : public Model
 {
 public:
     virtual ~OpenAPIGetSupportedOnRampsResponseMessageInnerIcons() {}

@@ -16,7 +16,7 @@
 #include "OpenAPIInputBody.h"
 #include "OpenAPIRippleTransactionOutput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIRippleAPIResponse : public Model
+class MOONSDK_API OpenAPIRippleAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIRippleAPIResponse() {}

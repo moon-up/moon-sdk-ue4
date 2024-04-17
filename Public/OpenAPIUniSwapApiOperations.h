@@ -18,13 +18,13 @@
 #include "OpenAPITransactionAPIResponse.h"
 #include "OpenAPIUniswapInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPIUniSwapApi::AddLiquidityRequest : public Request
+class MOONSDK_API OpenAPIUniSwapApi::AddLiquidityRequest : public Request
 {
 public:
     virtual ~AddLiquidityRequest() {}
@@ -36,7 +36,7 @@ public:
 	OpenAPIUniswapInput OpenAPIUniswapInput;
 };
 
-class OPENAPI_API OpenAPIUniSwapApi::AddLiquidityResponse : public Response
+class MOONSDK_API OpenAPIUniSwapApi::AddLiquidityResponse : public Response
 {
 public:
     virtual ~AddLiquidityResponse() {}
@@ -49,7 +49,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIUniSwapApi::RemoveLiquidityRequest : public Request
+class MOONSDK_API OpenAPIUniSwapApi::RemoveLiquidityRequest : public Request
 {
 public:
     virtual ~RemoveLiquidityRequest() {}
@@ -61,7 +61,7 @@ public:
 	OpenAPIUniswapInput OpenAPIUniswapInput;
 };
 
-class OPENAPI_API OpenAPIUniSwapApi::RemoveLiquidityResponse : public Response
+class MOONSDK_API OpenAPIUniSwapApi::RemoveLiquidityResponse : public Response
 {
 public:
     virtual ~RemoveLiquidityResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIUniSwapApi::SwapExactETHForTokensRequest : public Request
+class MOONSDK_API OpenAPIUniSwapApi::SwapExactETHForTokensRequest : public Request
 {
 public:
     virtual ~SwapExactETHForTokensRequest() {}
@@ -86,7 +86,7 @@ public:
 	OpenAPIUniswapInput OpenAPIUniswapInput;
 };
 
-class OPENAPI_API OpenAPIUniSwapApi::SwapExactETHForTokensResponse : public Response
+class MOONSDK_API OpenAPIUniSwapApi::SwapExactETHForTokensResponse : public Response
 {
 public:
     virtual ~SwapExactETHForTokensResponse() {}
@@ -99,7 +99,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPIUniSwapApi::SwapExactTokensForTokensRequest : public Request
+class MOONSDK_API OpenAPIUniSwapApi::SwapExactTokensForTokensRequest : public Request
 {
 public:
     virtual ~SwapExactTokensForTokensRequest() {}
@@ -111,7 +111,7 @@ public:
 	OpenAPIUniswapInput OpenAPIUniswapInput;
 };
 
-class OPENAPI_API OpenAPIUniSwapApi::SwapExactTokensForTokensResponse : public Response
+class MOONSDK_API OpenAPIUniSwapApi::SwapExactTokensForTokensResponse : public Response
 {
 public:
     virtual ~SwapExactTokensForTokensResponse() {}

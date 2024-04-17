@@ -20,13 +20,13 @@
 #include "OpenAPILitecoinInput.h"
 #include "OpenAPILitecoinTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPILitecoinApi::CreateLitecoinAccountRequest : public Request
+class MOONSDK_API OpenAPILitecoinApi::CreateLitecoinAccountRequest : public Request
 {
 public:
     virtual ~CreateLitecoinAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPILitecoinInput OpenAPILitecoinInput;
 };
 
-class OPENAPI_API OpenAPILitecoinApi::CreateLitecoinAccountResponse : public Response
+class MOONSDK_API OpenAPILitecoinApi::CreateLitecoinAccountResponse : public Response
 {
 public:
     virtual ~CreateLitecoinAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPILitecoinApi::GetLitecoinAccountRequest : public Request
+class MOONSDK_API OpenAPILitecoinApi::GetLitecoinAccountRequest : public Request
 {
 public:
     virtual ~GetLitecoinAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPILitecoinApi::GetLitecoinAccountResponse : public Response
+class MOONSDK_API OpenAPILitecoinApi::GetLitecoinAccountResponse : public Response
 {
 public:
     virtual ~GetLitecoinAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPILitecoinApi::ListLitecoinAccountsRequest : public Request
+class MOONSDK_API OpenAPILitecoinApi::ListLitecoinAccountsRequest : public Request
 {
 public:
     virtual ~ListLitecoinAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPILitecoinApi::ListLitecoinAccountsResponse : public Response
+class MOONSDK_API OpenAPILitecoinApi::ListLitecoinAccountsResponse : public Response
 {
 public:
     virtual ~ListLitecoinAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPILitecoinApi::SignLitecoinTransactionRequest : public Request
+class MOONSDK_API OpenAPILitecoinApi::SignLitecoinTransactionRequest : public Request
 {
 public:
     virtual ~SignLitecoinTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPILitecoinTransactionInput OpenAPILitecoinTransactionInput;
 };
 
-class OPENAPI_API OpenAPILitecoinApi::SignLitecoinTransactionResponse : public Response
+class MOONSDK_API OpenAPILitecoinApi::SignLitecoinTransactionResponse : public Response
 {
 public:
     virtual ~SignLitecoinTransactionResponse() {}

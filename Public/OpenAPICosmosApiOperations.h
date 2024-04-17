@@ -20,13 +20,13 @@
 #include "OpenAPICosmosInput.h"
 #include "OpenAPICosmosTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPICosmosApi::CreateCosmosAccountRequest : public Request
+class MOONSDK_API OpenAPICosmosApi::CreateCosmosAccountRequest : public Request
 {
 public:
     virtual ~CreateCosmosAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPICosmosInput OpenAPICosmosInput;
 };
 
-class OPENAPI_API OpenAPICosmosApi::CreateCosmosAccountResponse : public Response
+class MOONSDK_API OpenAPICosmosApi::CreateCosmosAccountResponse : public Response
 {
 public:
     virtual ~CreateCosmosAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPICosmosApi::GetCosmosAccountRequest : public Request
+class MOONSDK_API OpenAPICosmosApi::GetCosmosAccountRequest : public Request
 {
 public:
     virtual ~GetCosmosAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPICosmosApi::GetCosmosAccountResponse : public Response
+class MOONSDK_API OpenAPICosmosApi::GetCosmosAccountResponse : public Response
 {
 public:
     virtual ~GetCosmosAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPICosmosApi::ListCosmosAccountsRequest : public Request
+class MOONSDK_API OpenAPICosmosApi::ListCosmosAccountsRequest : public Request
 {
 public:
     virtual ~ListCosmosAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPICosmosApi::ListCosmosAccountsResponse : public Response
+class MOONSDK_API OpenAPICosmosApi::ListCosmosAccountsResponse : public Response
 {
 public:
     virtual ~ListCosmosAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPICosmosApi::SignCosmosTransactionRequest : public Request
+class MOONSDK_API OpenAPICosmosApi::SignCosmosTransactionRequest : public Request
 {
 public:
     virtual ~SignCosmosTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPICosmosTransactionInput OpenAPICosmosTransactionInput;
 };
 
-class OPENAPI_API OpenAPICosmosApi::SignCosmosTransactionResponse : public Response
+class MOONSDK_API OpenAPICosmosApi::SignCosmosTransactionResponse : public Response
 {
 public:
     virtual ~SignCosmosTransactionResponse() {}

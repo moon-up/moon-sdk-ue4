@@ -12,12 +12,12 @@
 
 #include "OpenAPITransactionResponseInfo.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPITransactionResponseInfo::WriteJson(JsonWriter& Writer) const

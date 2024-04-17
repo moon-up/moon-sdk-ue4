@@ -20,13 +20,13 @@
 #include "OpenAPISolanaInput.h"
 #include "OpenAPISolanaTransactionInput.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /* 
 
 */
-class OPENAPI_API OpenAPISolanaApi::CreateSolanaAccountRequest : public Request
+class MOONSDK_API OpenAPISolanaApi::CreateSolanaAccountRequest : public Request
 {
 public:
     virtual ~CreateSolanaAccountRequest() {}
@@ -37,7 +37,7 @@ public:
 	OpenAPISolanaInput OpenAPISolanaInput;
 };
 
-class OPENAPI_API OpenAPISolanaApi::CreateSolanaAccountResponse : public Response
+class MOONSDK_API OpenAPISolanaApi::CreateSolanaAccountResponse : public Response
 {
 public:
     virtual ~CreateSolanaAccountResponse() {}
@@ -50,7 +50,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPISolanaApi::GetSolanaAccountRequest : public Request
+class MOONSDK_API OpenAPISolanaApi::GetSolanaAccountRequest : public Request
 {
 public:
     virtual ~GetSolanaAccountRequest() {}
@@ -61,7 +61,7 @@ public:
 	FString AccountName;
 };
 
-class OPENAPI_API OpenAPISolanaApi::GetSolanaAccountResponse : public Response
+class MOONSDK_API OpenAPISolanaApi::GetSolanaAccountResponse : public Response
 {
 public:
     virtual ~GetSolanaAccountResponse() {}
@@ -74,7 +74,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPISolanaApi::ListSolanaAccountsRequest : public Request
+class MOONSDK_API OpenAPISolanaApi::ListSolanaAccountsRequest : public Request
 {
 public:
     virtual ~ListSolanaAccountsRequest() {}
@@ -84,7 +84,7 @@ public:
 	FString Authorization;
 };
 
-class OPENAPI_API OpenAPISolanaApi::ListSolanaAccountsResponse : public Response
+class MOONSDK_API OpenAPISolanaApi::ListSolanaAccountsResponse : public Response
 {
 public:
     virtual ~ListSolanaAccountsResponse() {}
@@ -97,7 +97,7 @@ public:
 /* 
 
 */
-class OPENAPI_API OpenAPISolanaApi::SignSolanaTransactionRequest : public Request
+class MOONSDK_API OpenAPISolanaApi::SignSolanaTransactionRequest : public Request
 {
 public:
     virtual ~SignSolanaTransactionRequest() {}
@@ -109,7 +109,7 @@ public:
 	OpenAPISolanaTransactionInput OpenAPISolanaTransactionInput;
 };
 
-class OPENAPI_API OpenAPISolanaApi::SignSolanaTransactionResponse : public Response
+class MOONSDK_API OpenAPISolanaApi::SignSolanaTransactionResponse : public Response
 {
 public:
     virtual ~SignSolanaTransactionResponse() {}

@@ -12,7 +12,7 @@
 
 #include "OpenAPIBitcoincashApiOperations.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Dom/JsonObject.h"
@@ -20,7 +20,7 @@
 #include "HttpModule.h"
 #include "PlatformHttp.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 FString OpenAPIBitcoincashApi::CreateBitcoinCashAccountRequest::ComputePath() const
@@ -54,15 +54,15 @@ void OpenAPIBitcoincashApi::CreateBitcoinCashAccountRequest::SetupHttpRequest(co
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIBitcoinCashInput) was ignored, not supported in multipart form"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIBitcoinCashInput) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIBitcoinCashInput) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIBitcoinCashInput) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 
@@ -189,15 +189,15 @@ void OpenAPIBitcoincashApi::SignBitcoinCashTransactionRequest::SetupHttpRequest(
 	}
 	else if (Consumes.Contains(TEXT("multipart/form-data")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIBitcoinCashTransactionInput) was ignored, not supported in multipart form"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIBitcoinCashTransactionInput) was ignored, not supported in multipart form"));
 	}
 	else if (Consumes.Contains(TEXT("application/x-www-form-urlencoded")))
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Body parameter (OpenAPIBitcoinCashTransactionInput) was ignored, not supported in urlencoded requests"));
+		UE_LOG(LogMoonSDK, Error, TEXT("Body parameter (OpenAPIBitcoinCashTransactionInput) was ignored, not supported in urlencoded requests"));
 	}
 	else
 	{
-		UE_LOG(LogOpenAPI, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
+		UE_LOG(LogMoonSDK, Error, TEXT("Request ContentType not supported (%s)"), *FString::Join(Consumes, TEXT(",")));
 	}
 }
 

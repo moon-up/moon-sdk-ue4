@@ -12,12 +12,12 @@
 
 #include "OpenAPISolanaAPIResponse.h"
 
-#include "OpenAPIModule.h"
+#include "MoonSDKModule.h"
 #include "OpenAPIHelpers.h"
 
 #include "Templates/SharedPointer.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 void OpenAPISolanaAPIResponse::WriteJson(JsonWriter& Writer) const

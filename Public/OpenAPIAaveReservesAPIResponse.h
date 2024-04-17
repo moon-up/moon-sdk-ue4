@@ -16,7 +16,7 @@
 #include "OpenAPIAaveReservesData.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIAaveReservesAPIResponse : public Model
+class MOONSDK_API OpenAPIAaveReservesAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIAaveReservesAPIResponse() {}

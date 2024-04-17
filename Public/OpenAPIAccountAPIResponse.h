@@ -16,7 +16,7 @@
 #include "OpenAPIAccountResponse.h"
 #include "OpenAPIInputBody.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPIAccountAPIResponse : public Model
+class MOONSDK_API OpenAPIAccountAPIResponse : public Model
 {
 public:
     virtual ~OpenAPIAccountAPIResponse() {}

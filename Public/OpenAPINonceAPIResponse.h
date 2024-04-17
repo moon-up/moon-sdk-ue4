@@ -16,7 +16,7 @@
 #include "OpenAPIInputBody.h"
 #include "OpenAPINonceResponse.h"
 
-namespace OpenAPI
+namespace MoonSDK
 {
 
 /*
@@ -24,7 +24,7 @@ namespace OpenAPI
  *
  * 
  */
-class OPENAPI_API OpenAPINonceAPIResponse : public Model
+class MOONSDK_API OpenAPINonceAPIResponse : public Model
 {
 public:
     virtual ~OpenAPINonceAPIResponse() {}
